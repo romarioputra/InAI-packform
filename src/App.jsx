@@ -5,6 +5,7 @@ import './App.css'
 import RegionButtonContainer from './components/RegionButton'
 import AskAIButton from './components/AskAIButton'
 import AIQueryButtonContainer from './components/AIQuery'
+import ConfigurationButtonContainer from './components/Config'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <RegionButtonContainer></RegionButtonContainer>
       <AskAIButton></AskAIButton>
       <AIQueryButtonContainer></AIQueryButtonContainer>
+      <ConfigurationButtonContainer></ConfigurationButtonContainer>
     </>
   )
 }
