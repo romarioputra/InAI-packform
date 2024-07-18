@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import RegionButtonContainer from './components/RegionButton'
 import AskAIButton from './components/AskAIButton'
+import AIQueryButtonContainer from './components/AIQuery'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <RegionButtonContainer></RegionButtonContainer>
       <AskAIButton></AskAIButton>
+      <AIQueryButtonContainer></AIQueryButtonContainer>
     </>
   )
 }
