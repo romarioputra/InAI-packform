@@ -8,6 +8,7 @@ import AIQueryButtonContainer from './components/AIQuery'
 import ConfigurationButtonContainer from './components/Config'
 import ChangePercentageButton from './components/ChangePercentage'
 import IntervalButtonContainer from './components/IntervalButton'
+import PortfolioChangeButtonContainer from './components/PortfolioChangeButton'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <ChangePercentageButton percentage="5.0"></ChangePercentageButton>
       <ChangePercentageButton percentage="-5.0"></ChangePercentageButton>
       <IntervalButtonContainer></IntervalButtonContainer>
+      <PortfolioChangeButtonContainer></PortfolioChangeButtonContainer>
     </>
   )
 }
