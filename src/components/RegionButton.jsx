@@ -36,11 +36,11 @@ function RegionButton({ region, selected }) {
 
 export default function RegionButtonContainer({ selectedIndex = 0 }) {
     return (
-        <>
+        <div>
             <RegionButton region="All" selected={selectedIndex == 0}></RegionButton>
             <RegionButton region="Australia" selected={selectedIndex == 1}></RegionButton>
             <RegionButton region="USA" selected={selectedIndex == 2}></RegionButton>
             <RegionButton region="Europe" selected={selectedIndex == 3}></RegionButton>
-        </>
+        </div>
     )
 }
