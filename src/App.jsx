@@ -9,6 +9,7 @@ import ConfigurationButtonContainer from './components/Config'
 import ChangePercentageButton from './components/ChangePercentage'
 import IntervalButtonContainer from './components/IntervalButton'
 import PortfolioChangeButtonContainer from './components/PortfolioChangeButton'
+import AddInvestmentContainer from './components/AddInvestment'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <ChangePercentageButton percentage="-5.0"></ChangePercentageButton>
       <IntervalButtonContainer></IntervalButtonContainer>
       <PortfolioChangeButtonContainer></PortfolioChangeButtonContainer>
+      <AddInvestmentContainer></AddInvestmentContainer>
     </>
   )
 }
