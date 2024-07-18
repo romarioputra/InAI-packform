@@ -6,6 +6,7 @@ import RegionButtonContainer from './components/RegionButton'
 import AskAIButton from './components/AskAIButton'
 import AIQueryButtonContainer from './components/AIQuery'
 import ConfigurationButtonContainer from './components/Config'
+import ChangePercentageButton from './components/ChangePercentage'
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
       <AskAIButton></AskAIButton>
       <AIQueryButtonContainer></AIQueryButtonContainer>
       <ConfigurationButtonContainer></ConfigurationButtonContainer>
+      <ChangePercentageButton percentage="5.0"></ChangePercentageButton>
+      <ChangePercentageButton percentage="-5.0"></ChangePercentageButton>
     </>
   )
 }
