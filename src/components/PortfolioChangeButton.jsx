@@ -32,12 +32,12 @@ function PortfolioChangeButton({ text, selected }) {
     )
 }
 
-export default function PortfolioChangeButtonContainer({ selectedIndex = 0 }) {
+export default function PortfolioChangeButtonContainer({ selectedIndex = 0, onSelect}) {
     return (
         <div>
-            <PortfolioChangeButton text="All" selected={selectedIndex == 0}></PortfolioChangeButton>
-            <PortfolioChangeButton text="Realised Gains" selected={selectedIndex == 1}></PortfolioChangeButton>
-            <PortfolioChangeButton text="Unrealised Gains" selected={selectedIndex == 2}></PortfolioChangeButton>
+            <PortfolioChangeButton text="All" selected={selectedIndex == 0} onClick={() => onSelect(0)}></PortfolioChangeButton>
+            <PortfolioChangeButton text="Realised Gains" selected={selectedIndex == 1} onClick={() => onSelect(1)}></PortfolioChangeButton>
+            <PortfolioChangeButton text="Unrealised Gains" selected={selectedIndex == 2} onClick={() => onSelect(2)}></PortfolioChangeButton>
         </div>
     )
 }

@@ -11,9 +11,11 @@ import IntervalButtonContainer from './components/IntervalButton'
 import PortfolioChangeButtonContainer from './components/PortfolioChangeButton'
 import AddInvestmentContainer from './components/AddInvestment'
 import LastIntervalButton from './components/LastInterval'
+import RowChangeContainer from './components/PortfolioPerformance'
+import { allRegion } from './data/data'
 
 function App() {
-
+  const data = allRegion
   return (
     <>
       <RegionButtonContainer></RegionButtonContainer>
@@ -26,6 +28,7 @@ function App() {
       <PortfolioChangeButtonContainer></PortfolioChangeButtonContainer>
       <AddInvestmentContainer></AddInvestmentContainer>
       <LastIntervalButton></LastIntervalButton>
+      <RowChangeContainer portfolioPerformance={data.portfolioPerformance}></RowChangeContainer>
     </>
   )
 }
