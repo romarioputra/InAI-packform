@@ -3,6 +3,16 @@ import ChangePercentageButton from "./ChangePercentage";
 import PortfolioChangeButtonContainer from "./PortfolioChangeButton";
 import { useMemo, useState } from "react";
 
+const IntervalText = styled.span`
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+`
+
+const NominalText = styled(IntervalText)`
+    font-weight: 700;
+`
+
 const LineBreak = styled.div`
     width: 100%;
     height: 1px;
@@ -17,10 +27,10 @@ const Title = styled.h2`
 
 function RowChange({ interval, changeNominal, changePercentage }) {
     return (
-        <div className="flex align-center justify-between py-3">
-            <span>{interval}</span>
+        <div className="flex align-center justify-between py-3" style={{paddingLeft: "12px", paddingRight: "12px"}}>
+            <IntervalText>{interval}</IntervalText>
             <div>
-                <span className="me-3">{changeNominal}</span>
+                <NominalText className="me-3">{changePercentage >= 0 ? '+' : ''}{changeNominal}</NominalText>
                 <ChangePercentageButton percentage={changePercentage}></ChangePercentageButton>
             </div>
         </div>

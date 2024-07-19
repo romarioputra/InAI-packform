@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { backgroundColor, baseCardStyle } from "../../styles/Card";
 
 export const CardSC = styled.div`
+    margin-top: ${p => p.$marginTop};
     color: ${p => p.$light ? 'white' : 'black'};
     ${baseCardStyle};
     ${p => backgroundColor[p.$backgroundColor]};

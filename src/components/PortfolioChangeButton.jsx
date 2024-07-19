@@ -34,7 +34,7 @@ function PortfolioChangeButton({ text, selected, index, setSelectedIndex }) {
 
 export default function PortfolioChangeButtonContainer({ selectedIndex = 0, setSelectedIndex }) {
     return (
-        <div>
+        <div className="mt-3">
             <PortfolioChangeButton text="All" selected={selectedIndex == 0} index={0} setSelectedIndex={setSelectedIndex}></PortfolioChangeButton>
             <PortfolioChangeButton text="Realised Gains" selected={selectedIndex == 1} index={1} setSelectedIndex={setSelectedIndex}></PortfolioChangeButton>
             <PortfolioChangeButton text="Unrealised Gains" selected={selectedIndex == 2} index={2} setSelectedIndex={setSelectedIndex}></PortfolioChangeButton>

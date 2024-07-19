@@ -2,7 +2,7 @@ import { css } from "styled-components"
 
 export const backgroundColor = {
     purple: css`background-color: var(--pf-purple)`,
-    white: css`background-color: var(--pf-white)`,
+    white: css`background-color: var(--pf-pure-white)`,
 }
 
 export const baseCardStyle = css`

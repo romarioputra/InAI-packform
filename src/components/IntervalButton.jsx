@@ -8,10 +8,15 @@ const Container = styled.div`
     padding: 3px;
     border-radius: 1234px;
     column-gap: 2px;
+    margin-top: 10px;
 `
 
 const IntervalButtonSC = styled(ButtonSC)`
     flex-basis: 100%;
+
+    .text {
+        font-weight: 700;
+    }
 
     &:hover {
         background: #FFFFFF;
@@ -36,24 +41,24 @@ const IntervalButtonSC = styled(ButtonSC)`
 
 `
 
-function IntervalButton({ text, selected }) {
+function IntervalButton({ text, selected, index, setSelectedInterval }) {
     return (
         <>
-            <IntervalButtonSC $transition="backgroundColor" $selected={selected}>
+            <IntervalButtonSC $transition="backgroundColor" $textSize="md" $selected={selected} onClick={() => setSelectedInterval(index)}>
                 <span className="text">{text}</span>
             </IntervalButtonSC>
         </>
     )
 }
 
-export default function IntervalButtonContainer({ selectedIndex = 3 }) {
+export default function IntervalButtonContainer({ selectedIndex = 3, setSelectedInterval }) {
     const fy = `FY ${new Date().getFullYear()}`
     return (
         <Container>
-            <IntervalButton text="Day" selected={selectedIndex == 0}></IntervalButton>
-            <IntervalButton text="Month" selected={selectedIndex == 1}></IntervalButton>
-            <IntervalButton text="Quarter" selected={selectedIndex == 2}></IntervalButton>
-            <IntervalButton text={fy} selected={selectedIndex == 3}></IntervalButton>
+            <IntervalButton text="Day" selected={selectedIndex == 0} index={0} setSelectedInterval={setSelectedInterval}></IntervalButton>
+            <IntervalButton text="Month" selected={selectedIndex == 1} index={1} setSelectedInterval={setSelectedInterval}></IntervalButton>
+            <IntervalButton text="Quarter" selected={selectedIndex == 2} index={2} setSelectedInterval={setSelectedInterval}></IntervalButton>
+            <IntervalButton text={fy} selected={selectedIndex == 3} index={3} setSelectedInterval={setSelectedInterval}></IntervalButton>
         </Container>
     )
 }

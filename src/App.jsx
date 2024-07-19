@@ -14,6 +14,7 @@ import LastIntervalButton from './components/LastInterval'
 import RowChangeContainer from './components/PortfolioPerformance'
 import { allRegion, australiaRegion, europeRegion, usaRegion } from './data/data'
 import NetAssetsCard from './components/card/NetAssets'
+import GrossIncomeCard from './components/card/GrossIncome'
 
 function App() {
   const [selectedRegionIndex, setSelectedRegionIndex] = useState(0)
@@ -30,15 +31,15 @@ function App() {
     }
     return prop
   }, [selectedRegionIndex])
+
   return (
     <>
       <AskAIButton></AskAIButton>
       <RegionButtonContainer selectedIndex={selectedRegionIndex} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButtonContainer>
       <NetAssetsCard net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-      <IntervalButtonContainer></IntervalButtonContainer>
-      <PortfolioChangeButtonContainer></PortfolioChangeButtonContainer>
       <AddInvestmentContainer></AddInvestmentContainer>
       <RowChangeContainer portfolioPerformance={data.portfolioPerformance}></RowChangeContainer>
+      <GrossIncomeCard grossIncome={data.grossIncome}></GrossIncomeCard>
       <AIQueryButtonContainer></AIQueryButtonContainer>
       <ConfigurationButtonContainer></ConfigurationButtonContainer>
     </>

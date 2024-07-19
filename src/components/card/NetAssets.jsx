@@ -1,10 +1,8 @@
-import { css } from "styled-components";
 import ChangePercentageButton from "../ChangePercentage";
 import LastIntervalButton from "../LastInterval";
 import { CardContentSC, CardFooterSC, CardHeaderSC, CardSC } from "./Card";
 
 export default function NetAssetsCard({ net, gross, percent, liab }) {
-
     return (
         <CardSC $backgroundColor="purple" $light>
             <CardHeaderSC>
