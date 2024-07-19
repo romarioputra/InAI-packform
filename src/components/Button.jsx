@@ -1,10 +1,14 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { backgroundColor, border, color, transition } from "../styles/Button";
 
-export const ButtonSC = styled.button`
+const baseButtonStyle = css`
     padding: 8px 12px;
     border-radius: 1234px;
     
+    img {
+        display: inline;
+    }
+
     .text {
         font-size: 14px;
         font-weight: 600;
@@ -15,7 +19,8 @@ export const ButtonSC = styled.button`
     }
 `
 
-export const StyledButtonSC = styled(ButtonSC)`
+export const ButtonSC = styled.button`
+    ${baseButtonStyle}
     ${p => backgroundColor[p.$backgroundColor]};
     ${p => transition[p.$transition]};
     ${p => border[p.$border]};

@@ -10,15 +10,21 @@ const ChangePercentageSC = styled(ButtonSC)`
         color: white;
     }
 `
+const isPositive = (percentage) => percentage >= 0
+const parseText = (percentage) => percentage >= 0 ? `+${percentage}%` : `${percentage}%`
+const iconFileName = (percentage) => percentage >= 0 ? '/gain.svg' : '/loss.svg'
 
-export default function ChangePercentageButton({percentage, color}) {
-    const isPositive = (percentage) => percentage >= 0
-    const parseText = (percentage) => percentage >= 0 ? `+${percentage}%` : `${percentage}%`
+function ChangeIcon({percentage}) {
+    return <img src={iconFileName(percentage)}></img>
+}
+
+export default function ChangePercentageButton({ percentage, color }) {
+
 
     return (
         <>
             <ChangePercentageSC $positive={isPositive(percentage)} $color={color}>
-                <span className="text">{parseText(percentage)}</span>
+                <ChangeIcon percentage={percentage}></ChangeIcon> <span className="text">{parseText(percentage)}</span>
             </ChangePercentageSC>
         </>
     )

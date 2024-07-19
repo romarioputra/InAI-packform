@@ -18,9 +18,9 @@ export const AIQuerySC = styled(ButtonSC)`
 export default function AIQueryButtonContainer() {
     return (
         <div>
-            <AIQuerySC><span className="text">I Listed shares balances per month?</span></AIQuerySC>
-            <AIQuerySC><span className="text">I Liquid assets per account?</span></AIQuerySC>
-            <AIQuerySC><span className="text">I What are current portfolio risks?</span></AIQuerySC>
+            <AIQuerySC><img src="/wand.svg"></img> <span className="text">Listed shares balances per month?</span></AIQuerySC>
+            <AIQuerySC><img src="/wand.svg"></img> <span className="text">Liquid assets per account?</span></AIQuerySC>
+            <AIQuerySC><img src="/wand.svg"></img> <span className="text">What are current portfolio risks?</span></AIQuerySC>
         </div>
     )
 }

@@ -13,7 +13,7 @@ const AskAIButtonSC = styled(ButtonSC)`
 export default function AskAIButton() {
     return (
         <>
-            <AskAIButtonSC><span className="text">I Ask AI Assistant I</span></AskAIButtonSC>
+            <AskAIButtonSC><img src="/white-wand.svg"></img> <span className="text">Ask AI Assistant</span> <img src="/arrow-r.svg"></img></AskAIButtonSC>
         </>
     )
 }

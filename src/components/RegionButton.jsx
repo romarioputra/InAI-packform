@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
-import { StyledButtonSC } from "./Button";
+import { ButtonSC } from "./Button";
 
-const RegionButtonSC = styled(StyledButtonSC)`
+const RegionButtonSC = styled(ButtonSC)`
     &:hover {
         border: 1px solid #4F46E5;
     }
@@ -27,7 +27,7 @@ function RegionButton({ region, selected }) {
             <RegionButtonSC $backgroundColor="white"
                 $transition="borderColor"
                 $border="transparent" $selected={selected}>
-                <span className="text">I {region}</span>
+                <img src={`/${region}.svg`}></img> <span className="text">{region}</span>
             </RegionButtonSC>
         </>
     )

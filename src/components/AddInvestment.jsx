@@ -2,9 +2,6 @@ import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
 
 const AddInvestmentSC = styled(ButtonSC)`
-    border: 1px solid transparent;
-    transition: border-color 270ms linear;
-
     &:hover {
         border: 1px solid #4F46E5;
     }
@@ -27,11 +24,14 @@ const AddInvestmentSC = styled(ButtonSC)`
 
 `
 
-function AddInvestment({ text, selected }) {
+function AddInvestment({ text, selected, icon }) {
     return (
         <>
-            <AddInvestmentSC $selected={selected}>
-                <span className="text">I {text}</span>
+            <AddInvestmentSC
+                $border="transparent"
+                $transition="borderColor"
+                $selected={selected}>
+                <img src={`/${icon}.svg`}></img> <span className="text">{text}</span>
             </AddInvestmentSC>
         </>
     )
@@ -40,8 +40,8 @@ function AddInvestment({ text, selected }) {
 export default function AddInvestmentContainer({ selectedIndex = 0 }) {
     return (
         <div>
-            <AddInvestment text="Add new asset" selected={selectedIndex == 0}></AddInvestment>
-            <AddInvestment text="Add new entity" selected={selectedIndex == 1}></AddInvestment>
+            <AddInvestment text="Add new asset" icon="asset" selected={selectedIndex == 0}></AddInvestment>
+            <AddInvestment text="Add new entity" icon="entity" selected={selectedIndex == 1}></AddInvestment>
         </div>
     )
 }
