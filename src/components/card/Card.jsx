@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { backgroundColor, baseCardStyle } from "../../styles/Card";
 
 export const CardSC = styled.div`
@@ -29,5 +29,17 @@ export const CardContentSC = styled.div`
         font-weight: 700;
         line-height: 38px;
         margin-bottom: 10px;
+    }
+`
+
+export const CardFooterSC = styled.div`
+    margin-top: 10px;
+    .nominal {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+    .expense {
+        color: ${p => p.$subdued ? css`var(--pf-sub-red)` : css`var(--pf-pink)`}
     }
 `

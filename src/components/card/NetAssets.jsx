@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 import ChangePercentageButton from "../ChangePercentage";
 import LastIntervalButton from "../LastInterval";
-import { CardContentSC, CardHeaderSC, CardSC } from "./Card";
+import { CardContentSC, CardFooterSC, CardHeaderSC, CardSC } from "./Card";
 
 export default function NetAssetsCard({ net, gross, percent, liab }) {
 
@@ -9,7 +9,7 @@ export default function NetAssetsCard({ net, gross, percent, liab }) {
         <CardSC $backgroundColor="purple" $light>
             <CardHeaderSC>
                 <h3 className="title">Net assets</h3>
-                <img src="/dot.svg" alt=""/>
+                <img src="/dot.svg" alt="" />
             </CardHeaderSC>
             <CardContentSC>
                 <div>
@@ -17,8 +17,12 @@ export default function NetAssetsCard({ net, gross, percent, liab }) {
                     <ChangePercentageButton percentage={percent} subdued={true}></ChangePercentageButton>
                     <LastIntervalButton></LastIntervalButton>
                 </div>
-                <img src="/caret-right.svg" style={{marginRight: "15px"}}></img>
+                <img src="/caret-right.svg" style={{ marginRight: "15px" }}></img>
             </CardContentSC>
+            <CardFooterSC>
+                <h4>Gross assets: <span className="nominal">{gross}</span></h4>
+                <h4>Liabilities: <span className="nominal expense">{liab}</span></h4>
+            </CardFooterSC>
         </CardSC>
     )
 }

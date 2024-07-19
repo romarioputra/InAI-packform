@@ -3,10 +3,13 @@ import { ButtonSC } from "./Button";
 
 const ChangePercentageSC = styled(ButtonSC)`
     background-color: ${p => p.$positive ? (p.$subdued ? css`var(--pf-sub-green)` : css`var(--pf-green)`) : (p.$subdued ? css`var(--pf-sub-red)` : css`var(--pf-red)`)};
-    padding: 4px 8px;
-    width: 80px;
+    padding: 2px 6px;
+    max-width: 80px;
     
     .text {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
         color: ${p => p.$positive ? (p.$subdued ? css`var(--pf-green)` : 'white') : (p.$subdued ? css`var(--pf-red)` : 'white')};
     }
 `
