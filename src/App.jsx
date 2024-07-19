@@ -16,6 +16,7 @@ import { allRegion, australiaRegion, europeRegion, usaRegion } from './data/data
 import NetAssetsCard from './components/card/NetAssets'
 import GrossIncomeCard from './components/card/GrossIncome'
 import Header from './components/Header'
+import Navbar from './components/Navbar'
 
 function App() {
   const [selectedRegionIndex, setSelectedRegionIndex] = useState(0)
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <>
+      <Navbar></Navbar>
       <Header></Header>
       <AskAIButton></AskAIButton>
       <RegionButtonContainer selectedIndex={selectedRegionIndex} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButtonContainer>

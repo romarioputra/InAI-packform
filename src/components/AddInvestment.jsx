@@ -45,7 +45,7 @@ function AddInvestment({ text, selected, icon }) {
                 $border="transparent"
                 $transition="borderColor"
                 $selected={selected}>
-                <img src={`/${icon}.svg`}></img> <span className="text">{text}</span>
+                <img style={{marginBottom: "3px"}} src={`/${icon}.svg`}></img> <span className="text">{text}</span>
             </AddInvestmentSC>
         </>
     )

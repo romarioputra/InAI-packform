@@ -25,7 +25,7 @@ export default function GrossIncomeCard({ grossIncome }) {
                     <ChangePercentageButton percentage={grossIncome[interval].lastYearPercentageGain} subdued={true}></ChangePercentageButton>
                     <LastIntervalButton></LastIntervalButton>
                 </div>
-                <img src="/caret-right.svg" style={{ marginRight: "15px" }}></img>
+                <img src="/arrow-r-container.svg"></img>
             </CardContentSC>
             <CardFooterSC $subdued>
                 <h4>Less expenses: <span className="nominal expense">{grossIncome[interval].lessExpenses}</span></h4>
