@@ -18,17 +18,15 @@ function App() {
   const data = allRegion
   return (
     <>
-      <RegionButtonContainer></RegionButtonContainer>
       <AskAIButton></AskAIButton>
-      <AIQueryButtonContainer></AIQueryButtonContainer>
-      <ConfigurationButtonContainer></ConfigurationButtonContainer>
-      <ChangePercentageButton percentage="5.0"></ChangePercentageButton>
-      <ChangePercentageButton percentage="-5.0"></ChangePercentageButton>
+      <RegionButtonContainer></RegionButtonContainer>
       <IntervalButtonContainer></IntervalButtonContainer>
       <PortfolioChangeButtonContainer></PortfolioChangeButtonContainer>
       <AddInvestmentContainer></AddInvestmentContainer>
       <LastIntervalButton></LastIntervalButton>
       <RowChangeContainer portfolioPerformance={data.portfolioPerformance}></RowChangeContainer>
+      <AIQueryButtonContainer></AIQueryButtonContainer>
+      <ConfigurationButtonContainer></ConfigurationButtonContainer>
     </>
   )
 }

@@ -22,22 +22,22 @@ const PortfolioChangeButtonSC = styled(ButtonSC)`
 
 `
 
-function PortfolioChangeButton({ text, selected }) {
+function PortfolioChangeButton({ text, selected, index, setSelectedIndex }) {
     return (
         <>
-            <PortfolioChangeButtonSC $transition="backgroundColor" $selected={selected}>
+            <PortfolioChangeButtonSC $transition="backgroundColor" $selected={selected} onClick={() => setSelectedIndex(index)}>
                 <span className="text">{text}</span>
             </PortfolioChangeButtonSC>
         </>
     )
 }
 
-export default function PortfolioChangeButtonContainer({ selectedIndex = 0, onSelect}) {
+export default function PortfolioChangeButtonContainer({ selectedIndex = 0, setSelectedIndex }) {
     return (
         <div>
-            <PortfolioChangeButton text="All" selected={selectedIndex == 0} onClick={() => onSelect(0)}></PortfolioChangeButton>
-            <PortfolioChangeButton text="Realised Gains" selected={selectedIndex == 1} onClick={() => onSelect(1)}></PortfolioChangeButton>
-            <PortfolioChangeButton text="Unrealised Gains" selected={selectedIndex == 2} onClick={() => onSelect(2)}></PortfolioChangeButton>
+            <PortfolioChangeButton text="All" selected={selectedIndex == 0} index={0} setSelectedIndex={setSelectedIndex}></PortfolioChangeButton>
+            <PortfolioChangeButton text="Realised Gains" selected={selectedIndex == 1} index={1} setSelectedIndex={setSelectedIndex}></PortfolioChangeButton>
+            <PortfolioChangeButton text="Unrealised Gains" selected={selectedIndex == 2} index={2} setSelectedIndex={setSelectedIndex}></PortfolioChangeButton>
         </div>
     )
 }

@@ -15,21 +15,21 @@ const Title = styled.h2`
     line-height: 24px;
 `
 
-function RowChange({interval, changeNominal, changePercentage}) {
+function RowChange({ interval, changeNominal, changePercentage }) {
     return (
         <div className="flex align-center justify-between py-3">
             <span>{interval}</span>
             <div>
-                <span>{changeNominal}</span>
+                <span className="me-3">{changeNominal}</span>
                 <ChangePercentageButton percentage={changePercentage}></ChangePercentageButton>
             </div>
         </div>
     )
 }
 
-export default function RowChangeContainer({portfolioPerformance}) {
+export default function RowChangeContainer({ portfolioPerformance }) {
     const [selectedIndex, setSelectedIndex] = useState(2)
-    const portfolioProperty = useMemo(() =>  {
+    const portfolioProperty = useMemo(() => {
         let prop = 'all'
         if (selectedIndex == 1) {
             prop = 'realisedGains'
@@ -43,8 +43,7 @@ export default function RowChangeContainer({portfolioPerformance}) {
     return (
         <div>
             <Title>Portfolio Performance</Title>
-            {selectedIndex}
-            <PortfolioChangeButtonContainer selectedIndex={selectedIndex} onSelect={setSelectedIndex}></PortfolioChangeButtonContainer>
+            <PortfolioChangeButtonContainer selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}></PortfolioChangeButtonContainer>
             <RowChange interval="Month" changeNominal={portfolioPerformance[portfolioProperty].month.nominal} changePercentage={portfolioPerformance[portfolioProperty].month.percentage}></RowChange>
             <LineBreak></LineBreak>
             <RowChange interval="Quarter" changeNominal={portfolioPerformance[portfolioProperty].quarter.nominal} changePercentage={portfolioPerformance[portfolioProperty].quarter.percentage}></RowChange>
