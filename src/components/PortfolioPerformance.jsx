@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ChangePercentageButton from "./ChangePercentage";
 import PortfolioChangeButtonContainer from "./PortfolioChangeButton";
 import { useMemo, useState } from "react";
+import { SectionTitle } from "./SectionHeading";
 
 const IntervalText = styled.span`
     font-size: 14px;
@@ -13,16 +14,11 @@ const NominalText = styled(IntervalText)`
     font-weight: 700;
 `
 
-const LineBreak = styled.div`
+export const LineBreak = styled.div`
+    ${p => p.$margin ? css`margin: 10px 0px` : css``};
     width: 100%;
     height: 1px;
     border-bottom: 1px solid #E2E8F0;
-`
-
-const Title = styled.h2`
-    color: var(--pf-gray);
-    font-weight: 700;
-    line-height: 24px;
 `
 
 function RowChange({ interval, changeNominal, changePercentage }) {
@@ -52,7 +48,7 @@ export default function RowChangeContainer({ portfolioPerformance }) {
     const fyTxt = `FY ${new Date().getFullYear()}`
     return (
         <div>
-            <Title>Portfolio Performance</Title>
+            <SectionTitle>Portfolio Performance</SectionTitle>
             <PortfolioChangeButtonContainer selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}></PortfolioChangeButtonContainer>
             <RowChange interval="Month" changeNominal={portfolioPerformance[portfolioProperty].month.nominal} changePercentage={portfolioPerformance[portfolioProperty].month.percentage}></RowChange>
             <LineBreak></LineBreak>

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
+import { SectionTitle } from "./SectionHeading";
 
 export const AIQuerySC = styled(ButtonSC)`
     padding: 10px 16px;
@@ -19,7 +20,8 @@ export const AIQuerySC = styled(ButtonSC)`
 
 export default function AIQueryButtonContainer() {
     return (
-        <div>
+        <div className="mt-3">
+            <SectionTitle>AI suggested queries</SectionTitle>
             <AIQuerySC $border="gray" $transition="borderColor"><img src="/wand.svg"></img> <span className="text">Listed shares balances per month?</span></AIQuerySC>
             <AIQuerySC $border="gray" $transition="borderColor"><img src="/wand.svg"></img> <span className="text">Liquid assets per account?</span></AIQuerySC>
             <AIQuerySC $border="gray" $transition="borderColor"><img src="/wand.svg"></img> <span className="text">What are current portfolio risks?</span></AIQuerySC>
