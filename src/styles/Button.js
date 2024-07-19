@@ -41,7 +41,14 @@ export const textSize = {
         .text {
             font-size: 12px;
             font-weight: 600;
-            line-height: 16px;
+            line-height: 27px;
+        }
+    `,
+    md: css`
+        .text {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 26px;
         }
     `
 }

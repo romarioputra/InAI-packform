@@ -33,7 +33,7 @@ function RegionButton({ region, selected, index, setSelectedRegionIndex }) {
         <>
             <RegionButtonSC $backgroundColor="white"
                 $transition="borderColor"
-                $border="transparent" $selected={selected}
+                $border="transparent" $textSize="md" $selected={selected}
                 onClick={() => setSelectedRegionIndex(index)}>
                 <img src={`/${region}.svg`}></img> <span className="text">{region}</span>
             </RegionButtonSC>
