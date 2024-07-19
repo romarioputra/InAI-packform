@@ -1,10 +1,7 @@
 import styled, { css } from "styled-components";
-import { ButtonSC } from "./Button";
+import { StyledButtonSC } from "./Button";
 
-const RegionButtonSC = styled(ButtonSC)`
-    border: 1px solid transparent;
-    transition: border-color 270ms linear;
-
+const RegionButtonSC = styled(StyledButtonSC)`
     &:hover {
         border: 1px solid #4F46E5;
     }
@@ -27,7 +24,9 @@ const RegionButtonSC = styled(ButtonSC)`
 function RegionButton({ region, selected }) {
     return (
         <>
-            <RegionButtonSC $selected={selected}>
+            <RegionButtonSC $backgroundColor="white"
+                $transition="borderColor"
+                $border="transparent" $selected={selected}>
                 <span className="text">I {region}</span>
             </RegionButtonSC>
         </>

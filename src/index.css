@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+Lets assume we make a theme for packform app
+Im going to use 'pf' as a prefix for all the main color
+*/
+
+:root {
+    --pf-blue: #4F46E5;
+    --pf-light-blue: #EEF2FF;
+    --pf-midnight: #1E293B;
+    --pf-gray: #475569;
+    --pf-sub-gray: #CBD5E1;
+    --pf-green: #22C55E;
+    --pf-red: #F43F5E;
+    --pf-sub-green: #F0FDF4;
+    --pf-sub-red: #881337;
+}

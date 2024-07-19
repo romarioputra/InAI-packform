@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { backgroundColor, border, color, transition } from "../styles/Button";
 
 export const ButtonSC = styled.button`
     padding: 8px 12px;
@@ -12,4 +13,11 @@ export const ButtonSC = styled.button`
         text-align: left;
         color: #475569;
     }
+`
+
+export const StyledButtonSC = styled(ButtonSC)`
+    ${p => backgroundColor[p.$backgroundColor]};
+    ${p => transition[p.$transition]};
+    ${p => border[p.$border]};
+    ${p => color[p.$color]};
 `
