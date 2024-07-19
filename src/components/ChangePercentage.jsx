@@ -7,9 +7,6 @@ const ChangePercentageSC = styled(ButtonSC)`
     max-width: 80px;
     
     .text {
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 16px;
         color: ${p => p.$positive ? (p.$subdued ? css`var(--pf-green)` : 'white') : (p.$subdued ? css`var(--pf-red)` : 'white')};
     }
 `
@@ -24,7 +21,7 @@ function ChangeIcon({percentage, subdued}) {
 export default function ChangePercentageButton({ percentage, subdued }) {
     return (
         <>
-            <ChangePercentageSC $positive={isPositive(percentage)} $subdued={subdued}>
+            <ChangePercentageSC $positive={isPositive(percentage)} $subdued={subdued} $textSize="sm">
                 <ChangeIcon percentage={percentage} subdued={subdued}></ChangeIcon> <span className="text">{parseText(percentage)}</span>
             </ChangePercentageSC>
         </>

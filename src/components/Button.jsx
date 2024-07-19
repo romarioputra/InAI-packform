@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { backgroundColor, baseButtonStyle, border, color, transition } from "../styles/Button";
+import { backgroundColor, baseButtonStyle, border, color, textSize, transition } from "../styles/Button";
 
 export const ButtonSC = styled.button`
     ${baseButtonStyle}
@@ -7,4 +7,5 @@ export const ButtonSC = styled.button`
     ${p => transition[p.$transition]};
     ${p => border[p.$border]};
     ${p => color[p.$color]};
+    ${p => textSize[p.$textSize]}
 `

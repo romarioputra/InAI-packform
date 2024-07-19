@@ -36,6 +36,16 @@ export const color = {
     `
 }
 
+export const textSize = {
+    sm: css`
+        .text {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16px;
+        }
+    `
+}
+
 export const baseButtonStyle = css`
     padding: 8px 12px;
     border-radius: 1234px;
