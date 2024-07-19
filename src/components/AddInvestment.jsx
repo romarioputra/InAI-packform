@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
 
 const AddInvestmentSC = styled(ButtonSC)`
+    margin: 18px 0px;
     &:hover {
         border: 1px solid #4F46E5;
     }

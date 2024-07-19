@@ -5,14 +5,13 @@ import { ButtonSC } from "./Button";
 
 const LastIntervalButtonSC = styled(ButtonSC)`
     padding: 4px 12px;
-    background-color: var(--pf-light-gray);
     margin: 0px 5px;
 `
 
 export default function LastIntervalButton() {
     return (
         <>
-            <LastIntervalButtonSC><span className="text">last day</span></LastIntervalButtonSC>
+            <LastIntervalButtonSC $backgroundColor="lightGray"><span className="text">last day</span></LastIntervalButtonSC>
         </>
     )
 }

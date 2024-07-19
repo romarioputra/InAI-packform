@@ -38,7 +38,6 @@ function App() {
       <IntervalButtonContainer></IntervalButtonContainer>
       <PortfolioChangeButtonContainer></PortfolioChangeButtonContainer>
       <AddInvestmentContainer></AddInvestmentContainer>
-      <LastIntervalButton></LastIntervalButton>
       <RowChangeContainer portfolioPerformance={data.portfolioPerformance}></RowChangeContainer>
       <AIQueryButtonContainer></AIQueryButtonContainer>
       <ConfigurationButtonContainer></ConfigurationButtonContainer>

@@ -5,6 +5,7 @@ export const backgroundColor = {
     lightBlue: css`background-color: var(--pf-light-blue)`,
     midnight: css`background-color: var(--pf-midnight)`,
     gray: css`background-color: var(--pf-gray)`,
+    lightGray: css`background-color: var(--pf-light-gray)`,
     green: css`background-color: var(--pf-green)`,
     red: css`background-color: var(--pf-red)`,
     subGreen: css`background-color: var(--pf-sub-green)`,
