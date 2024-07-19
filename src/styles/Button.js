@@ -35,6 +35,24 @@ export const color = {
     `
 }
 
+export const baseButtonStyle = css`
+    padding: 8px 12px;
+    border-radius: 1234px;
+    
+    img {
+        display: inline;
+    }
+
+    .text {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: -0.006em;
+        text-align: left;
+        color: #475569;
+    }
+`
+
 // In this file I am trying to refactor (to prevent duplicate styling) for simple properties like above
 // I do not refactor the hover / selected style because it is too complex for my liking (not complex from code side, but from DX)
 // And I believe that hover and selected style are too personalized for each element, so I prefer it more to put it in each element file.

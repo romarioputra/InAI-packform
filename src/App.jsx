@@ -13,6 +13,7 @@ import AddInvestmentContainer from './components/AddInvestment'
 import LastIntervalButton from './components/LastInterval'
 import RowChangeContainer from './components/PortfolioPerformance'
 import { allRegion, australiaRegion, europeRegion, usaRegion } from './data/data'
+import NetAssetsCard from './components/card/NetAssets'
 
 function App() {
   const [selectedRegionIndex, setSelectedRegionIndex] = useState(0)
@@ -33,6 +34,7 @@ function App() {
     <>
       <AskAIButton></AskAIButton>
       <RegionButtonContainer selectedIndex={selectedRegionIndex} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButtonContainer>
+      <NetAssetsCard></NetAssetsCard>
       <IntervalButtonContainer></IntervalButtonContainer>
       <PortfolioChangeButtonContainer></PortfolioChangeButtonContainer>
       <AddInvestmentContainer></AddInvestmentContainer>
