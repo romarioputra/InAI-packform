@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
 
 const ChangePercentageSC = styled(ButtonSC)`
-    background-color: ${p => p.$positive ? p.$color ?? "#22C55E" : p.$color ?? "#F43F5E"};
+    background-color: ${p => p.$positive ? p.$color ?? css`var(--pf-green)` : p.$color ?? css`var(--pf-red)`};
     padding: 4px 8px;
     max-width: 80px;
     
@@ -19,8 +19,6 @@ function ChangeIcon({percentage}) {
 }
 
 export default function ChangePercentageButton({ percentage, color }) {
-
-
     return (
         <>
             <ChangePercentageSC $positive={isPositive(percentage)} $color={color}>
