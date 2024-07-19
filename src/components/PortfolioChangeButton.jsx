@@ -2,8 +2,6 @@ import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
 
 const PortfolioChangeButtonSC = styled(ButtonSC)`
-    transition: background-color 270ms linear;
-
     &:hover {
         background: #EEF2FF;
     }
@@ -27,7 +25,7 @@ const PortfolioChangeButtonSC = styled(ButtonSC)`
 function PortfolioChangeButton({ text, selected }) {
     return (
         <>
-            <PortfolioChangeButtonSC $selected={selected}>
+            <PortfolioChangeButtonSC $transition="backgroundColor" $selected={selected}>
                 <span className="text">{text}</span>
             </PortfolioChangeButtonSC>
         </>

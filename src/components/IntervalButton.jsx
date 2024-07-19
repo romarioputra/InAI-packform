@@ -11,8 +11,6 @@ const Container = styled.div`
 `
 
 const IntervalButtonSC = styled(ButtonSC)`
-    transition: background-color 270ms linear;
-
     &:hover {
         background: #FFFFFF;
         box-shadow: 0px 2px 4px -2px #1717170F;
@@ -39,7 +37,7 @@ const IntervalButtonSC = styled(ButtonSC)`
 function IntervalButton({ text, selected }) {
     return (
         <>
-            <IntervalButtonSC $selected={selected}>
+            <IntervalButtonSC $transition="backgroundColor" $selected={selected}>
                 <span className="text">{text}</span>
             </IntervalButtonSC>
         </>
