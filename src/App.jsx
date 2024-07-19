@@ -34,7 +34,7 @@ function App() {
     <>
       <AskAIButton></AskAIButton>
       <RegionButtonContainer selectedIndex={selectedRegionIndex} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButtonContainer>
-      <NetAssetsCard></NetAssetsCard>
+      <NetAssetsCard net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
       <IntervalButtonContainer></IntervalButtonContainer>
       <PortfolioChangeButtonContainer></PortfolioChangeButtonContainer>
       <AddInvestmentContainer></AddInvestmentContainer>
