@@ -4,13 +4,15 @@ import { ButtonSC } from "./Button";
 const Container = styled.div`
     display: flex;
     background: #F1F5F9;
-    width: max-content;
+    width: 100%;
     padding: 3px;
     border-radius: 1234px;
     column-gap: 2px;
 `
 
 const IntervalButtonSC = styled(ButtonSC)`
+    flex-basis: 100%;
+
     &:hover {
         background: #FFFFFF;
         box-shadow: 0px 2px 4px -2px #1717170F;

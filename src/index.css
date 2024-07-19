@@ -21,3 +21,7 @@ Im going to use 'pf' as a prefix for all the main color
     --pf-purple: #7E22CE;
     --pf-white: #E2E8F0;
 }
+
+body {
+    padding: 0px 12px 16px 12px;
+}
