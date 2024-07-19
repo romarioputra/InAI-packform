@@ -4,8 +4,9 @@ import styled from "styled-components";
 import { ButtonSC } from "./Button";
 
 const LastIntervalButtonSC = styled(ButtonSC)`
-    padding: 4px 8px;
-    background-color: var(--pf-light-gray)
+    padding: 4px 12px;
+    background-color: var(--pf-light-gray);
+    margin: 0px 5px;
 `
 
 export default function LastIntervalButton() {
