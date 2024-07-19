@@ -14,7 +14,7 @@ const ConfigButtonSC = styled(AIQuerySC)`
 function CustomiseButton() {
     return (
         <>
-            <ConfigButtonSC><img src="/customise.svg"></img> <span className="text">I Customise</span></ConfigButtonSC>
+            <ConfigButtonSC $border="gray" $transition="borderColor"><img src="/customise.svg"></img> <span className="text">I Customise</span></ConfigButtonSC>
         </>
     )
 }
@@ -22,7 +22,7 @@ function CustomiseButton() {
 function WidgetButton() {
     return (
         <>
-            <ConfigButtonSC><img src="/widget.svg"></img> <span className="text">I Add Widget</span></ConfigButtonSC>
+            <ConfigButtonSC $border="gray" $transition="borderColor"><img src="/widget.svg"></img> <span className="text">I Add Widget</span></ConfigButtonSC>
         </>
     )
 }
