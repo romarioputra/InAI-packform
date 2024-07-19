@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -12,14 +12,27 @@ import PortfolioChangeButtonContainer from './components/PortfolioChangeButton'
 import AddInvestmentContainer from './components/AddInvestment'
 import LastIntervalButton from './components/LastInterval'
 import RowChangeContainer from './components/PortfolioPerformance'
-import { allRegion } from './data/data'
+import { allRegion, australiaRegion, europeRegion, usaRegion } from './data/data'
 
 function App() {
-  const data = allRegion
+  const [selectedRegionIndex, setSelectedRegionIndex] = useState(0)
+  const data = useMemo(() => {
+    let prop = allRegion
+    if (selectedRegionIndex == 1) {
+      prop = australiaRegion
+    }
+    else if (selectedRegionIndex == 2) {
+      prop = usaRegion
+    }
+    else if (selectedRegionIndex == 3) {
+      prop = europeRegion
+    }
+    return prop
+  }, [selectedRegionIndex])
   return (
     <>
       <AskAIButton></AskAIButton>
-      <RegionButtonContainer></RegionButtonContainer>
+      <RegionButtonContainer selectedIndex={selectedRegionIndex} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButtonContainer>
       <IntervalButtonContainer></IntervalButtonContainer>
       <PortfolioChangeButtonContainer></PortfolioChangeButtonContainer>
       <AddInvestmentContainer></AddInvestmentContainer>
