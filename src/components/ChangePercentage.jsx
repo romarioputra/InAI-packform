@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
 
 const ChangePercentageSC = styled(ButtonSC)`
-    background-color: ${p => p.$positive ? (p.$subdued ? css`var(--pf-sub-green)` : css`var(--pf-green)`) : (p.$subdued ? css`var(--pf-sub-red)` : css`var(--pf-red)`)};
+    background-color: ${p => p.$backgroundColor ?? (p.$positive ? (p.$subdued ? css`var(--pf-sub-green)` : css`var(--pf-green)`) : (p.$subdued ? css`var(--pf-sub-red)` : css`var(--pf-red)`))};
     padding: 2px 6px;
     max-width: 80px;
     
