@@ -22,9 +22,11 @@ export default function AIQueryButtonContainer() {
     return (
         <div className="mt-3">
             <SectionTitle>AI suggested queries</SectionTitle>
-            <AIQuerySC $border="gray" $transition="borderColor"><img src="/wand.svg"></img> <span className="text">Listed shares balances per month?</span></AIQuerySC>
-            <AIQuerySC $border="gray" $transition="borderColor"><img src="/wand.svg"></img> <span className="text">Liquid assets per account?</span></AIQuerySC>
-            <AIQuerySC $border="gray" $transition="borderColor"><img src="/wand.svg"></img> <span className="text">What are current portfolio risks?</span></AIQuerySC>
+            <div className="mt-3">
+                <AIQuerySC $border="gray" $transition="borderColor"><img src="/wand.svg"></img> <span className="text">Listed shares balances per month?</span></AIQuerySC>
+                <AIQuerySC $border="gray" $transition="borderColor"><img src="/wand.svg"></img> <span className="text">Liquid assets per account?</span></AIQuerySC>
+                <AIQuerySC $border="gray" $transition="borderColor"><img src="/wand.svg"></img> <span className="text">What are current portfolio risks?</span></AIQuerySC>
+            </div>
         </div>
     )
 }
