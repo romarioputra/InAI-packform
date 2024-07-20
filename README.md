@@ -32,7 +32,16 @@ Because this is a complex app (investment apps usually contain a lot of complex 
 </p>
 
 <p>
-UI/UX is only good if it fits the purpose of the web. Since this is an investment app, I assume that the user will be an investor. What an investor needs is a lot of digestible information on the same page. I am an active investor in my country's stock market as well, and I use some apps that help me invest, such as Stockbit (which will be my UI/UX inspiration). These are the example I use for this task.
+UI/UX is only good if it fits the purpose of the web. Since this is an investment app, I assume that the user will be an investor. What an investor needs is a lot of digestible information on the same page. I am an active investor in my country's stock market as well, and I use some apps that help me invest, such as Stockbit (which will be my UI/UX inspiration). These are the examples I use for this task.
+
+*Note: Stockbit is more of a broker application rather than an "investment dashboard" app, but I think they still have the same purpose: providing a lot of digestible information on the same page. From the screenshot, what I see is that layout is very important in an investment app. The layout indirectly guides us to what we want to see.
 </p>
 
-![Stockbit Dashboard Layout](https://imgur.com/a/WBE5hMl)
+![Stockbit Dashboard Layout](/documentation-assets/stockbit_dashboard_layout.png)
+
+#### Web Design Philosophies
+
+<p>
+I am trying to implement a Z-shaped layout (https://uxplanet.org/z-shaped-pattern-for-reading-web-content-ce1135f92f1c). The reason for this is that the Z-shaped layout allows users to scan the web and quickly find the main information they are looking for, such as net assets, gross income, or their gains.
+</p>
+
