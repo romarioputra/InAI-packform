@@ -14,8 +14,8 @@ export const CardHeaderSC = styled.div`
     align-items: center;
 
     .title {
-        font-size: 16px;
-        weight: 500;
+        font-size: 18px;
+        font-weight: 600;
         line-height: 24px;
     }
 `

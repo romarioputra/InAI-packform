@@ -15,6 +15,10 @@ const LastInterval = styled.span`
     color: var(--pf-gray);
 `
 
+const Heading = styled.h3`
+    color: var(--pf-gray);
+`
+
 export default function GrossIncomeCard({ grossIncome }) {
   const [selectedInterval, setSelectedInterval] = useState(3)
   const interval = useMemo(() => {
@@ -27,7 +31,7 @@ export default function GrossIncomeCard({ grossIncome }) {
     return (
         <CardSC $backgroundColor="white" $marginTop="18px">
             <CardHeaderSC>
-                <h3 className="title">Gross income</h3>
+                <Heading className="title">Gross income</Heading>
                 <img src="/dot.svg" alt="" />
             </CardHeaderSC>
             <CardContentSC>
