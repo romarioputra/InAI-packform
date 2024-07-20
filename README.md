@@ -32,6 +32,7 @@ Because this is a complex app (investment apps usually contain a lot of complex 
 </p>
 
 <p>
-
-
+UI/UX is only good if it fits the purpose of the web. Since this is an investment app, I assume that the user will be an investor. What an investor needs is a lot of digestible information on the same page. I am an active investor in my country's stock market as well, and I use some apps that help me invest, such as Stockbit (which will be my UI/UX inspiration). These are the example I use for this task.
 </p>
+
+![Stockbit Dashboard Layout](https://imgur.com/a/WBE5hMl)
