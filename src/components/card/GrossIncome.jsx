@@ -36,13 +36,13 @@ export default function GrossIncomeCard({ grossIncome }) {
             </CardHeaderSC>
             <CardContentSC>
                 <div>
-                    <h2 className="nominal">{grossIncome[interval].grossIncome}</h2>
+                    <h2 className="nominal main-asset" style={{marginBottom: 0}}>{grossIncome[interval].grossIncome}</h2>
                     <ChangePercentageButton backgroundColor="transparent" percentage={grossIncome[interval].lastYearPercentageGain} subdued={true}></ChangePercentageButton>
                     <LastInterval>vs last year</LastInterval>
                 </div>
                 <img src="/arrow-r-container.svg"></img>
             </CardContentSC>
-            <CardFooterSC $subdued>
+            <CardFooterSC $subdued $marginTop="0px">
                 <h4>Less expenses: <span className="nominal expense">{grossIncome[interval].lessExpenses}</span></h4>
                 <h4>Net income: <span className="nominal">{grossIncome[interval].netIncome}</span></h4>
             </CardFooterSC>

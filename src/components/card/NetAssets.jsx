@@ -11,13 +11,13 @@ export default function NetAssetsCard({ net, gross, percent, liab }) {
             </CardHeaderSC>
             <CardContentSC>
                 <div>
-                    <h2 className="nominal">{net}</h2>
+                    <h2 className="nominal main-asset">{net}</h2>
                     <ChangePercentageButton percentage={percent} subdued={true}></ChangePercentageButton>
                     <LastIntervalButton></LastIntervalButton>
                 </div>
                 <img src="/caret-right.svg" style={{ marginRight: "15px" }}></img>
             </CardContentSC>
-            <CardFooterSC>
+            <CardFooterSC $marginTop="10px">
                 <h4>Gross assets: <span className="nominal">{gross}</span></h4>
                 <h4>Liabilities: <span className="nominal expense">{liab}</span></h4>
             </CardFooterSC>

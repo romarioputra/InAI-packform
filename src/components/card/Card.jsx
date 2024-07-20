@@ -25,6 +25,10 @@ export const CardContentSC = styled.div`
     justify-content: space-between;
     align-items: center;
 
+    .main-asset {
+        margin-top: 5px;
+    }
+
     .nominal {
         font-size: 30px;
         font-weight: 700;
@@ -34,7 +38,7 @@ export const CardContentSC = styled.div`
 `
 
 export const CardFooterSC = styled.div`
-    margin-top: 10px;
+    margin-top: ${p => p.$marginTop};
     .nominal {
         font-size: 16px;
         font-weight: 700;

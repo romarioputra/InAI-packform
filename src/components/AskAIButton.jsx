@@ -6,6 +6,7 @@ const AskAIButtonSC = styled(ButtonSC)`
     padding: 12px 20px;
     .text {
         color: white;
+        margin: 0px 8px;
     }
 
 `
