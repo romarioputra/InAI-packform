@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
+import { useState } from "react";
 
 const Container = styled.div`
     display: flex;
@@ -38,24 +39,26 @@ const AddInvestmentSC = styled(ButtonSC)`
 
 `
 
-function AddInvestment({ text, selected, icon }) {
+function AddInvestment({ text, selected, icon, index, setSelectedIndex }) {
     return (
         <>
             <AddInvestmentSC
                 $border="transparent"
                 $transition="borderColor"
-                $selected={selected}>
+                $selected={selected}
+                onClick={() => setSelectedIndex(index)}>
                 <img style={{marginBottom: "3px"}} src={`/${icon}.svg`}></img> <span className="text">{text}</span>
             </AddInvestmentSC>
         </>
     )
 }
 
-export default function AddInvestmentContainer({ selectedIndex = 0 }) {
+export default function AddInvestmentContainer() {
+    const [selectedIndex, setSelectedIndex] = useState(0)
     return (
         <Container>
-            <AddInvestment text="Add new asset" icon="asset" selected={selectedIndex == 0}></AddInvestment>
-            <AddInvestment text="Add new entity" icon="entity" selected={selectedIndex == 1}></AddInvestment>
+            <AddInvestment text="Add new asset" icon="asset" selected={selectedIndex == 0} index={0} setSelectedIndex={setSelectedIndex}></AddInvestment>
+            <AddInvestment text="Add new entity" icon="entity" selected={selectedIndex == 1} index={1} setSelectedIndex={setSelectedIndex}></AddInvestment>
         </Container>
     )
 }

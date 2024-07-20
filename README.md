@@ -1,8 +1,10 @@
-# React + Vite
+# InAI Packform Front End Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Mobile UI
+<p>
+    First of all, I want to discuss the principle when developing this application. First principle that I use is "Duplication is far cheaper than the wrong abstraction" [Sandi Metz] (https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
+</p>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p>
+    I Believe that
+</p>
