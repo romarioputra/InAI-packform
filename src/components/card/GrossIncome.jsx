@@ -3,6 +3,17 @@ import ChangePercentageButton from "../ChangePercentage";
 import LastIntervalButton from "../LastInterval";
 import { CardContentSC, CardFooterSC, CardHeaderSC, CardSC } from "./Card";
 import IntervalButtonContainer from "../IntervalButton";
+import styled from "styled-components";
+
+
+// In production app, the text came from the server
+const LastInterval = styled.span`
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: 4px;
+    color: var(--pf-gray);
+`
 
 export default function GrossIncomeCard({ grossIncome }) {
   const [selectedInterval, setSelectedInterval] = useState(3)
@@ -22,8 +33,8 @@ export default function GrossIncomeCard({ grossIncome }) {
             <CardContentSC>
                 <div>
                     <h2 className="nominal">{grossIncome[interval].grossIncome}</h2>
-                    <ChangePercentageButton percentage={grossIncome[interval].lastYearPercentageGain} subdued={true}></ChangePercentageButton>
-                    <LastIntervalButton></LastIntervalButton>
+                    <ChangePercentageButton backgroundColor="transparent" percentage={grossIncome[interval].lastYearPercentageGain} subdued={true}></ChangePercentageButton>
+                    <LastInterval>vs last year</LastInterval>
                 </div>
                 <img src="/arrow-r-container.svg"></img>
             </CardContentSC>

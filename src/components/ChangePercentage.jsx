@@ -18,10 +18,10 @@ function ChangeIcon({percentage, subdued}) {
     return <img src={iconFileName(percentage, subdued)}></img>
 }
 
-export default function ChangePercentageButton({ percentage, subdued }) {
+export default function ChangePercentageButton({ percentage, subdued, backgroundColor }) {
     return (
         <>
-            <ChangePercentageSC $positive={isPositive(percentage)} $subdued={subdued} $textSize="sm">
+            <ChangePercentageSC $positive={isPositive(percentage)} $subdued={subdued} $backgroundColor={backgroundColor} $textSize="sm">
                 <ChangeIcon percentage={percentage} subdued={subdued}></ChangeIcon> <span className="text">{parseText(percentage)}</span>
             </ChangePercentageSC>
         </>

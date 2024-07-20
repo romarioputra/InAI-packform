@@ -1,6 +1,7 @@
 import { css } from "styled-components"
 
 export const backgroundColor = {
+    transparent: css`background-color: transparent`,
     blue: css`background-color: var(--pf-blue)`,
     lightBlue: css`background-color: var(--pf-light-blue)`,
     midnight: css`background-color: var(--pf-midnight)`,
