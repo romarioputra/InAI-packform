@@ -1,16 +1,37 @@
 # InAI Packform Front End Test
 
+### Setup
+
+<p>
+I used Vite to speed up my development time. I chose React for this task because I wanted to learn more about it. Tailwind is installed, but only for utility classes (margin, padding, spacing, flex, etc.). The main library I used is styled-components, which helped me create reusable components.
+</p>
+
 ### Mobile UI
 <p>
-    First of all, I want to discuss the principle when developing this application. First principle that I use is "Duplication is far cheaper than the wrong abstraction" [Sandi Metz] (https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
+    Because this is a simple app (with no code logic in the task), I would like to discuss the principle of reusability. The principle I used is "Duplication is far cheaper than the wrong abstraction" [Sandi Metz](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction).
 </p>
 
 <p>
-    I believe that packform is going to score how reusable my components are. And at first, my way to doing this are to create one react component that receive "styles" object with the CSS Modules method. But after trying it, I find it not scalable. Because yes I can just pass it the class name from each css file, but what if the content of the component is far different from others (like image after/before the text)?
+    I believe that Packform is going to evaluate how reusable my components are. Initially, my approach was to create a single React component that receives a "styles" object using the CSS Modules method. However, I found this approach not scalable. While I could pass the class names from each CSS file, this method fails when the content of the component differs significantly (such as an image appearing before or after the text).
 </p>
 
-<p>And yes, I can use react slots (https://sandroroth.com/blog/react-slots/) but the component become too complex (for a button that have a conditional logic seems weird to me).</p>
+<p>Although using React slots (https://sandroroth.com/blog/react-slots/) was an option, I found that it made the components too complex (especially for a button with conditional logic, which seemed odd to me)</p>
 
 <p>
-    So I explore styled-components (first time using it) and I found it better than the method above. What I like about styled components is I still can create pure html components that I can just pass the style that I needed. So in Button.js and Card.js file, I create some sort of "configuration" that can modify our button and card component. Using styled components make me understand how UI libraries like ChakraUI and Bootstrap are made.
+    Therefore, I explored styled-components (using it for the first time) and found it more effective than the previous method. What I like about styled-components is that I can still create pure HTML components and simply pass the necessary styles to them. In the Button.js and Card.js files, I created a sort of "configuration" that modifies our button and card components. Using styled-components helped me understand how UI libraries like ChakraUI and Bootstrap are made.
+</p>
+
+### Large Screen UI
+
+<p>
+Because this is a complex app (investment apps usually contain a lot of complex numbers, configurations, and calculations), I want to convert the mobile UI into a significantly different UI for desktop/laptop screens. I don't want to just "make the cards, buttons, and text bigger" because that is not helpful.
+</p>
+
+<p>
+ There is a programming pattern called "backend for frontend" (https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends), which essentially means providing different responses (I believe now graphQL is the more popular option) for each frontend that uses the data from the server. This is because there is different information that can be displayed on mobile and large screens. For example, in the mobile UI, users might only need to know if their investment is profitable or not. However, on the desktop screen, users might need to see more detailed information, such as the sources of their investments.
+</p>
+
+<p>
+
+
 </p>
