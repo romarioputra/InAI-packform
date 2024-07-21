@@ -1,0 +1,41 @@
+/* src/components/App.css */
+
+.toggle-button {
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.close-button {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    transition: right 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999;
+    cursor: pointer;
+    color: var(--pf-gray);
+    font-weight: 700;
+}
+
+.close-button.open {
+    right: 50px;
+}
