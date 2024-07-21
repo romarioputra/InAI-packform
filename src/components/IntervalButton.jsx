@@ -15,6 +15,9 @@ const IntervalButtonSC = styled(ButtonSC)`
 
     .text {
         font-weight: 700;
+        @media (640px < width < 1300px) {
+            font-size: 10px;
+        }
     }
 
     &:hover {

@@ -9,6 +9,9 @@ const IntervalText = styled.span`
     font-size: 14px;
     font-weight: 600;
     line-height: 30px;
+    @media (640px < width < 1300px) {
+        font-size: 10px;
+    }
 `
 
 const NominalText = styled(IntervalText)`
@@ -26,7 +29,7 @@ function RowChange({ interval, changeNominal, changePercentage }) {
     return (
         <Flex $justifyContent="space-between" $alignItems="center" className="py-3 px-3">
             <IntervalText>{interval}</IntervalText>
-            <div>
+            <div className="text-right">
                 <NominalText className="me-3">{changePercentage >= 0 ? '+' : ''}{changeNominal}</NominalText>
                 <ChangePercentageButton percentage={changePercentage}></ChangePercentageButton>
             </div>

@@ -20,6 +20,9 @@ export const CardHeaderSC = styled.div`
         font-size: 18px;
         font-weight: 600;
         line-height: 24px;
+        @media (640px < width < 1300px) {
+            font-size: 14px;
+        }
     }
 `
 
@@ -37,6 +40,9 @@ export const CardContentSC = styled.div`
         font-weight: 700;
         line-height: 38px;
         margin-bottom: 10px;
+        @media (640px < width < 1300px) {
+            font-size: 21px;
+        }
     }
 `
 
@@ -46,6 +52,9 @@ export const CardFooterSC = styled.div`
         font-size: 16px;
         font-weight: 700;
         line-height: 32px;
+        @media (640px < width < 1300px) {
+            font-size: 11px;
+        }
     }
     .expense {
         color: ${p => p.$subdued ? css`var(--pf-sub-red)` : css`var(--pf-pink)`}
