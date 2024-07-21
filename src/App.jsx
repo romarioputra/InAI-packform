@@ -52,6 +52,7 @@ function App() {
         <ConfigurationButtonContainer></ConfigurationButtonContainer>
       </div>
       <div className="sm:block hidden mt-5">
+        <Navbar></Navbar>
         <Flex>
           <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1" }}>
             <Flex $rowGap="1.5rem" $direction="column">

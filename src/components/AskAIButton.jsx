@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
 
-const AskAIButtonSC = styled(ButtonSC)`
+export const AskAIButtonSC = styled(ButtonSC)`
     width: 100%;
     padding: 12px 20px;
     .text {
