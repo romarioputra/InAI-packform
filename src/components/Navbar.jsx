@@ -1,9 +1,11 @@
+import { Flex } from "./FlexCointainer";
+
 export default function Navbar() {
     return (
-        <nav className="flex justify-between items-center mt-5">
+        <Flex $justifyContent="space-between" $alignItems="center" className="mt-5">
             <img src="/avatar.svg"></img>
             <img src="/brand.svg"></img>
             <img src="/burger.svg"></img>
-        </nav>
+        </Flex>
     )
 }

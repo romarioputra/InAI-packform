@@ -3,7 +3,7 @@
 ### Setup
 
 <p>
-I used Vite to speed up my development time. I chose React for this task because I wanted to learn more about it. Tailwind is installed, but only for utility classes (margin, padding, spacing, flex, etc.). The main library I used is styled-components, which helped me create reusable components.
+I used Vite to speed up my development time. I chose React for this task because I wanted to learn more about it. Tailwind is installed, but only for utility classes (margin, padding, spacing, etc.). The main library I used is styled-components, which helped me create reusable components.
 </p>
 
 ### Mobile UI

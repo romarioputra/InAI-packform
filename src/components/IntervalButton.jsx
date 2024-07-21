@@ -1,13 +1,12 @@
 import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
+import { Flex } from "./FlexCointainer";
 
-const Container = styled.div`
-    display: flex;
+const Container = styled(Flex)`
     background: #F1F5F9;
     width: 100%;
     padding: 3px;
     border-radius: 1234px;
-    column-gap: 2px;
     margin-top: 10px;
 `
 
@@ -54,7 +53,7 @@ function IntervalButton({ text, selected, index, setSelectedInterval }) {
 export default function IntervalButtonContainer({ selectedIndex = 3, setSelectedInterval }) {
     const fy = `FY ${new Date().getFullYear()}`
     return (
-        <Container>
+        <Container $columnGap="2px">
             <IntervalButton text="Day" selected={selectedIndex == 0} index={0} setSelectedInterval={setSelectedInterval}></IntervalButton>
             <IntervalButton text="Month" selected={selectedIndex == 1} index={1} setSelectedInterval={setSelectedInterval}></IntervalButton>
             <IntervalButton text="Quarter" selected={selectedIndex == 2} index={2} setSelectedInterval={setSelectedInterval}></IntervalButton>

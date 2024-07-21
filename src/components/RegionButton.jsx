@@ -1,11 +1,6 @@
 import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
-
-const Container = styled.div`
-    display: flex;
-    width: 100%;
-    margin: 18px 0px;
-`
+import { Flex } from "./FlexCointainer";
 
 const RegionButtonSC = styled(ButtonSC)`
     flex-grow: 1;
@@ -43,11 +38,11 @@ function RegionButton({ region, selected, index, setSelectedRegionIndex }) {
 
 export default function RegionButtonContainer({ selectedIndex = 0, setSelectedRegionIndex }) {
     return (
-        <Container>
+        <Flex className="my-5">
             <RegionButton region="All" selected={selectedIndex == 0} index={0} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButton>
             <RegionButton region="Australia" selected={selectedIndex == 1} index={1} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButton>
             <RegionButton region="USA" selected={selectedIndex == 2} index={2} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButton>
             <RegionButton region="Europe" selected={selectedIndex == 3} index={3} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButton>
-        </Container>
+        </Flex>
     )
 }

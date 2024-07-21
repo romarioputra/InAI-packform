@@ -17,6 +17,7 @@ import NetAssetsCard from './components/card/NetAssets'
 import GrossIncomeCard from './components/card/GrossIncome'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
+import { Flex } from './components/FlexCointainer'
 
 function App() {
   const [selectedRegionIndex, setSelectedRegionIndex] = useState(0)
@@ -50,12 +51,12 @@ function App() {
         <ConfigurationButtonContainer></ConfigurationButtonContainer>
       </div>
       <div className="sm:block hidden">
-        <div className='flex gap-x-6'>
+        <Flex $columnGap="1.5rem">
           <NetAssetsCard region="All" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
           <NetAssetsCard region="Australia" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
           <NetAssetsCard region="USA" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
           <NetAssetsCard region="Europe" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-        </div>
+        </Flex>
       </div>
     </>
   )

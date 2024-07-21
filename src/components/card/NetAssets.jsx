@@ -1,10 +1,11 @@
 import ChangePercentageButton from "../ChangePercentage";
+import { Flex } from "../FlexCointainer";
 import LastIntervalButton from "../LastInterval";
 import { CardContentSC, CardFooterSC, CardHeaderSC, CardSC } from "./Card";
 
 function Region({ region }) {
     if (region) {
-        return <div className="flex gap-x-1"><img src={`/${region}.svg`}></img> <span className="text">{region}</span></div>
+        return <Flex $columnGap="0.25rem"><img src={`/${region}.svg`}></img> <span className="text">{region}</span></Flex>
     }
     return null
 }
@@ -13,9 +14,9 @@ export default function NetAssetsCard({ net, gross, percent, liab, region }) {
     return (
         <CardSC $backgroundColor="purple" $light>
             <CardHeaderSC>
-                <div className="flex gap-x-2">
+                <Flex $columnGap="0.5rem">
                     <Region region={region}></Region><h3 className="title">Net assets</h3>
-                </div>
+                </Flex>
                 <img src="/dot.svg" alt="" />
             </CardHeaderSC>
             <CardContentSC>

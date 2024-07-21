@@ -1,12 +1,7 @@
 import styled, { css } from "styled-components";
 import { ButtonSC } from "./Button";
 import { useState } from "react";
-
-const Container = styled.div`
-    display: flex;
-    width: 100%;
-    column-gap: 15px;
-`
+import { Flex } from "./FlexCointainer";
 
 const AddInvestmentSC = styled(ButtonSC)`
     flex-basis: 100%; 
@@ -56,9 +51,9 @@ function AddInvestment({ text, selected, icon, index, setSelectedIndex }) {
 export default function AddInvestmentContainer() {
     const [selectedIndex, setSelectedIndex] = useState(0)
     return (
-        <Container>
+        <Flex $columnGap="15px">
             <AddInvestment text="Add new asset" icon="asset" selected={selectedIndex == 0} index={0} setSelectedIndex={setSelectedIndex}></AddInvestment>
             <AddInvestment text="Add new entity" icon="entity" selected={selectedIndex == 1} index={1} setSelectedIndex={setSelectedIndex}></AddInvestment>
-        </Container>
+        </Flex>
     )
 }

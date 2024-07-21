@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { AIQuerySC } from "./AIQuery";
+import { Flex } from "./FlexCointainer";
 
 const ConfigButtonSC = styled(AIQuerySC)`
     width: auto;
@@ -29,9 +30,9 @@ function WidgetButton() {
 
 export default function ConfigurationButtonContainer() {
     return (
-        <div className="flex justify-center gap-x-2">
+        <Flex $columnGap="0.5rem" $justifyContent="center">
             <CustomiseButton></CustomiseButton>
             <WidgetButton></WidgetButton>
-        </div>
+        </Flex>
     )
 }
