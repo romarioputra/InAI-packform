@@ -7,7 +7,7 @@ function Region({ region }) {
     if (region) {
         return <Flex $columnGap="0.25rem"><img src={`/${region}.svg`}></img> <span className="text">{region}</span></Flex>
     }
-    return null
+    return <h3 className="title">Net assets</h3>
 }
 
 export default function NetAssetsCard({ net, gross, percent, liab, region }) {
@@ -15,7 +15,7 @@ export default function NetAssetsCard({ net, gross, percent, liab, region }) {
         <CardSC $backgroundColor="purple" $light>
             <CardHeaderSC>
                 <Flex $columnGap="0.5rem">
-                    <Region region={region}></Region><h3 className="title">Net assets</h3>
+                    <Region region={region}></Region>
                 </Flex>
                 <img src="/dot.svg" alt="" />
             </CardHeaderSC>

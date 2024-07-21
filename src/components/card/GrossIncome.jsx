@@ -31,7 +31,7 @@ export default function GrossIncomeCard({ grossIncome, marginTop = "18px", defau
     return (
         <CardSC $backgroundColor="white" $marginTop={marginTop}>
             <CardHeaderSC>
-                <Heading className="title">{`${intervalText} `}Gross income</Heading>
+                <Heading className="title">{`${intervalText ? intervalText : `Gross income`}`}</Heading>
                 <img src="/dot.svg" alt="" />
             </CardHeaderSC>
             <CardContentSC>

@@ -18,7 +18,8 @@ import GrossIncomeCard from './components/card/GrossIncome'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import { Flex } from './components/FlexCointainer'
-import { CardSC } from './components/card/Card'
+import { CardHeaderSC, CardSC } from './components/card/Card'
+import { Title } from './components/SectionHeading'
 
 function App() {
   const [selectedRegionIndex, setSelectedRegionIndex] = useState(0)
@@ -55,6 +56,7 @@ function App() {
         <Navbar></Navbar>
         <Flex>
           <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1" }}>
+            <CardHeaderSC><h1 className="title mb-3">Net assets</h1></CardHeaderSC>
             <Flex $rowGap="1.5rem" $direction="column">
               <Flex $columnGap="1.5rem">
                 <NetAssetsCard region="All" net={allRegion.netAssets} gross={allRegion.grossAssets} percent={allRegion.lastDayPercentageGain} liab={allRegion.liabilities}></NetAssetsCard>
@@ -67,6 +69,7 @@ function App() {
             </Flex>
           </CardSC>
           <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1", height: "max-content" }}>
+            <CardHeaderSC><h1 className="title mb-3">Gross income</h1></CardHeaderSC>
             <Flex $rowGap="1.5rem" $direction="column">
               <Flex $columnGap="1.5rem">
                 <GrossIncomeCard marginTop='0' intervalText='Day' grossIncome={data.grossIncome} defaultSelectedIndex={0} showInterval={false}></GrossIncomeCard>
