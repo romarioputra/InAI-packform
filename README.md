@@ -48,4 +48,3 @@ I am trying to implement a Z-shaped layout (https://uxplanet.org/z-shaped-patter
 <p>
 Therefore, I placed the net assets and gross income at the top of the page, as these elements will surely catch the user's eye when scanning. I also displayed all regions and the entire timeframe, because on a web page, we can show all the information. This differs from mobile, where the screen is limited, and we use button tabs to change the state. On mobile, we can display the cards (for USA, Australia, Europe) vertically, but it would require the user to scroll longer, which we want to avoid. In fact, there's a term for this called scrolling fatigue (https://ux4sight.com/blog/understanding-the-basics-of-scrolling-fatigue).
 </p>
-
