@@ -18,6 +18,7 @@ import GrossIncomeCard from './components/card/GrossIncome'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import { Flex } from './components/FlexCointainer'
+import { CardSC } from './components/card/Card'
 
 function App() {
   const [selectedRegionIndex, setSelectedRegionIndex] = useState(0)
@@ -51,12 +52,18 @@ function App() {
         <ConfigurationButtonContainer></ConfigurationButtonContainer>
       </div>
       <div className="sm:block hidden">
-        <Flex $columnGap="1.5rem">
-          <NetAssetsCard region="All" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-          <NetAssetsCard region="Australia" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-          <NetAssetsCard region="USA" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-          <NetAssetsCard region="Europe" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-        </Flex>
+        <CardSC $maxContent $backgroundColor="white" $borderRadius="10px">
+          <Flex $rowGap="1.5rem" $direction="column">
+            <Flex $columnGap="1.5rem">
+              <NetAssetsCard region="All" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+              <NetAssetsCard region="Australia" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+            </Flex>
+            <Flex $columnGap="1.5rem">
+              <NetAssetsCard region="USA" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+              <NetAssetsCard region="Europe" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+            </Flex>
+          </Flex>
+        </CardSC>
       </div>
     </>
   )

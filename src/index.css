@@ -26,4 +26,8 @@ Im going to use 'pf' as a prefix for all the main color
 
 body {
     padding: 0px 12px 16px 12px;
+
+    @media (min-width: 640px) {
+        background-color: #f8f4fc;
+    }
 }

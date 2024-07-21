@@ -4,6 +4,8 @@ import { backgroundColor, baseCardStyle } from "../../styles/Card";
 export const CardSC = styled.div`
     margin-top: ${p => p.$marginTop};
     color: ${p => p.$light ? 'white' : 'black'};
+    width: ${p => p.$maxContent ? 'max-content' : '100%'};
+    border-radius: ${p => p.$borderRadius ?? '24px'};
     ${baseCardStyle};
     ${p => backgroundColor[p.$backgroundColor]};
 `
