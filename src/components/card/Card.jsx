@@ -6,6 +6,7 @@ export const CardSC = styled.div`
     color: ${p => p.$light ? 'white' : 'black'};
     width: ${p => p.$maxContent ? 'max-content' : '100%'};
     border-radius: ${p => p.$borderRadius ?? '24px'};
+    min-width: ${p => p.$minWidth ?? '0'};
     ${baseCardStyle};
     ${p => backgroundColor[p.$backgroundColor]};
 `

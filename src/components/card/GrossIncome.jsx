@@ -19,7 +19,7 @@ const Heading = styled.h3`
     color: var(--pf-gray);
 `
 
-export default function GrossIncomeCard({ grossIncome }) {
+export default function GrossIncomeCard({ grossIncome, marginTop = "18px" }) {
   const [selectedInterval, setSelectedInterval] = useState(3)
   const interval = useMemo(() => {
     let prop = 'fy'
@@ -29,7 +29,7 @@ export default function GrossIncomeCard({ grossIncome }) {
     return prop
   }, [selectedInterval])
     return (
-        <CardSC $backgroundColor="white" $marginTop="18px">
+        <CardSC $backgroundColor="white" $marginTop={marginTop}>
             <CardHeaderSC>
                 <Heading className="title">Gross income</Heading>
                 <img src="/dot.svg" alt="" />

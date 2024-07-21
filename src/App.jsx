@@ -52,18 +52,32 @@ function App() {
         <ConfigurationButtonContainer></ConfigurationButtonContainer>
       </div>
       <div className="sm:block hidden">
-        <CardSC $maxContent $backgroundColor="white" $borderRadius="10px">
-          <Flex $rowGap="1.5rem" $direction="column">
-            <Flex $columnGap="1.5rem">
-              <NetAssetsCard region="All" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-              <NetAssetsCard region="Australia" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+        <Flex>
+          <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1" }}>
+            <Flex $rowGap="1.5rem" $direction="column">
+              <Flex $columnGap="1.5rem">
+                <NetAssetsCard region="All" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+                <NetAssetsCard region="Australia" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+              </Flex>
+              <Flex $columnGap="1.5rem">
+                <NetAssetsCard region="USA" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+                <NetAssetsCard region="Europe" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+              </Flex>
             </Flex>
-            <Flex $columnGap="1.5rem">
-              <NetAssetsCard region="USA" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-              <NetAssetsCard region="Europe" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+          </CardSC>
+          <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1" }}>
+            <Flex $rowGap="1.5rem" $direction="column">
+              <Flex $columnGap="1.5rem">
+                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome}></GrossIncomeCard>
+              </Flex>
+              <Flex $columnGap="1.5rem">
+                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome}></GrossIncomeCard>
+              </Flex>
             </Flex>
-          </Flex>
-        </CardSC>
+          </CardSC>
+        </Flex>
       </div>
     </>
   )
