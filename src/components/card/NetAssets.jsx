@@ -2,11 +2,20 @@ import ChangePercentageButton from "../ChangePercentage";
 import LastIntervalButton from "../LastInterval";
 import { CardContentSC, CardFooterSC, CardHeaderSC, CardSC } from "./Card";
 
-export default function NetAssetsCard({ net, gross, percent, liab }) {
+function Region({ region }) {
+    if (region) {
+        return <div className="flex gap-x-1"><img src={`/${region}.svg`}></img> <span className="text">{region}</span></div>
+    }
+    return null
+}
+
+export default function NetAssetsCard({ net, gross, percent, liab, region }) {
     return (
         <CardSC $backgroundColor="purple" $light>
             <CardHeaderSC>
-                <h3 className="title">Net assets</h3>
+                <div className="flex gap-x-2">
+                    <Region region={region}></Region><h3 className="title">Net assets</h3>
+                </div>
                 <img src="/dot.svg" alt="" />
             </CardHeaderSC>
             <CardContentSC>

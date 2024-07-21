@@ -13,7 +13,7 @@ export const CardHeaderSC = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    .title {
+    .title, .text {
         font-size: 18px;
         font-weight: 600;
         line-height: 24px;

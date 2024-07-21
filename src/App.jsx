@@ -36,17 +36,27 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
-      <Header></Header>
-      <AskAIButton></AskAIButton>
-      <RegionButtonContainer selectedIndex={selectedRegionIndex} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButtonContainer>
-      <NetAssetsCard net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-      <AddInvestmentContainer></AddInvestmentContainer>
-      <RowChangeContainer portfolioPerformance={data.portfolioPerformance}></RowChangeContainer>
-      <GrossIncomeCard grossIncome={data.grossIncome}></GrossIncomeCard>
-      <AIQueryButtonContainer></AIQueryButtonContainer>
-      <LineBreak $margin></LineBreak>
-      <ConfigurationButtonContainer></ConfigurationButtonContainer>
+      <div className='sm:hidden block'>
+        <Navbar></Navbar>
+        <Header></Header>
+        <AskAIButton></AskAIButton>
+        <RegionButtonContainer selectedIndex={selectedRegionIndex} setSelectedRegionIndex={setSelectedRegionIndex}></RegionButtonContainer>
+        <NetAssetsCard net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+        <AddInvestmentContainer></AddInvestmentContainer>
+        <RowChangeContainer portfolioPerformance={data.portfolioPerformance}></RowChangeContainer>
+        <GrossIncomeCard grossIncome={data.grossIncome}></GrossIncomeCard>
+        <AIQueryButtonContainer></AIQueryButtonContainer>
+        <LineBreak $margin></LineBreak>
+        <ConfigurationButtonContainer></ConfigurationButtonContainer>
+      </div>
+      <div className="sm:block hidden">
+        <div className='flex gap-x-6'>
+          <NetAssetsCard region="All" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+          <NetAssetsCard region="Australia" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+          <NetAssetsCard region="USA" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+          <NetAssetsCard region="Europe" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+        </div>
+      </div>
     </>
   )
 }

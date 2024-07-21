@@ -42,6 +42,6 @@ UI/UX is only good if it fits the purpose of the web. Since this is an investmen
 #### Web Design Philosophies
 
 <p>
-I am trying to implement a Z-shaped layout (https://uxplanet.org/z-shaped-pattern-for-reading-web-content-ce1135f92f1c). The reason for this is that the Z-shaped layout allows users to scan the web and quickly find the main information they are looking for, such as net assets, gross income, or their gains.
+I am trying to implement a Z-shaped layout (https://uxplanet.org/z-shaped-pattern-for-reading-web-content-ce1135f92f1c). The reason for this is that the Z-shaped layout allows users to scan the web and quickly find the main information they are looking for, such as net assets, gross income, or their gains. As the article said, scanning means they only stop to read when something catches the eye.
 </p>
 
