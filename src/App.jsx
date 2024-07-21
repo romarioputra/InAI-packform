@@ -11,7 +11,7 @@ import IntervalButtonContainer from './components/IntervalButton'
 import PortfolioChangeButtonContainer from './components/PortfolioChangeButton'
 import AddInvestmentContainer from './components/AddInvestment'
 import LastIntervalButton from './components/LastInterval'
-import RowChangeContainer, { LineBreak } from './components/PortfolioPerformance'
+import RowChangeContainer, { LineBreak, RowChanges } from './components/PortfolioPerformance'
 import { allRegion, australiaRegion, europeRegion, usaRegion } from './data/data'
 import NetAssetsCard from './components/card/NetAssets'
 import GrossIncomeCard from './components/card/GrossIncome'
@@ -72,17 +72,17 @@ function App() {
             <CardHeaderSC><h1 className="title mb-3">Gross income</h1></CardHeaderSC>
             <Flex $rowGap="1.5rem" $direction="column">
               <Flex $columnGap="1.5rem">
-                <GrossIncomeCard marginTop='0' intervalText='Day' grossIncome={data.grossIncome} defaultSelectedIndex={0} showInterval={false}></GrossIncomeCard>
-                <GrossIncomeCard marginTop='0' intervalText='Month' grossIncome={data.grossIncome} defaultSelectedIndex={1} showInterval={false}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' region="All" grossIncome={allRegion.grossIncome} defaultSelectedIndex={0}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' region="Australia" grossIncome={australiaRegion.grossIncome} defaultSelectedIndex={1}></GrossIncomeCard>
               </Flex>
               <Flex $columnGap="1.5rem">
-                <GrossIncomeCard marginTop='0' intervalText='Quarter' grossIncome={data.grossIncome} defaultSelectedIndex={2} showInterval={false}></GrossIncomeCard>
-                <GrossIncomeCard marginTop='0' intervalText={fy} grossIncome={data.grossIncome} defaultSelectedIndex={3} showInterval={false}></GrossIncomeCard>
-              </Flex>
+                <GrossIncomeCard marginTop='0' region="USA" grossIncome={usaRegion.grossIncome} defaultSelectedIndex={2}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' region="Europe" grossIncome={europeRegion.grossIncome} defaultSelectedIndex={3}></GrossIncomeCard>
             </Flex>
-          </CardSC>
         </Flex>
-      </div>
+      </CardSC>
+    </Flex >
+      </div >
     </>
   )
 }
