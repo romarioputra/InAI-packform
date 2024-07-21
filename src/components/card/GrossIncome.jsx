@@ -19,8 +19,8 @@ const Heading = styled.h3`
     color: var(--pf-gray);
 `
 
-export default function GrossIncomeCard({ grossIncome, marginTop = "18px" }) {
-  const [selectedInterval, setSelectedInterval] = useState(3)
+export default function GrossIncomeCard({ grossIncome, marginTop = "18px", defaultSelectedIndex = 3 }) {
+  const [selectedInterval, setSelectedInterval] = useState(defaultSelectedIndex)
   const interval = useMemo(() => {
     let prop = 'fy'
     if (selectedInterval == 2) {

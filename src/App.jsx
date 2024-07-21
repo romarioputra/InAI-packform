@@ -68,12 +68,12 @@ function App() {
           <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1" }}>
             <Flex $rowGap="1.5rem" $direction="column">
               <Flex $columnGap="1.5rem">
-                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome}></GrossIncomeCard>
-                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome} defaultSelectedIndex={0}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome} defaultSelectedIndex={1}></GrossIncomeCard>
               </Flex>
               <Flex $columnGap="1.5rem">
-                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome}></GrossIncomeCard>
-                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome} defaultSelectedIndex={2}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome} defaultSelectedIndex={3}></GrossIncomeCard>
               </Flex>
             </Flex>
           </CardSC>
