@@ -19,24 +19,24 @@ const Heading = styled.h3`
     color: var(--pf-gray);
 `
 
-export default function GrossIncomeCard({ grossIncome, marginTop = "18px", defaultSelectedIndex = 3 }) {
-  const [selectedInterval, setSelectedInterval] = useState(defaultSelectedIndex)
-  const interval = useMemo(() => {
-    let prop = 'fy'
-    if (selectedInterval == 2) {
-      prop = 'quarter'
-    }
-    return prop
-  }, [selectedInterval])
+export default function GrossIncomeCard({ grossIncome, marginTop = "18px", defaultSelectedIndex = 3, showInterval = true, intervalText = '' }) {
+    const [selectedInterval, setSelectedInterval] = useState(defaultSelectedIndex)
+    const interval = useMemo(() => {
+        let prop = 'fy'
+        if (selectedInterval == 2) {
+            prop = 'quarter'
+        }
+        return prop
+    }, [selectedInterval])
     return (
         <CardSC $backgroundColor="white" $marginTop={marginTop}>
             <CardHeaderSC>
-                <Heading className="title">Gross income</Heading>
+                <Heading className="title">{`${intervalText} `}Gross income</Heading>
                 <img src="/dot.svg" alt="" />
             </CardHeaderSC>
             <CardContentSC>
                 <div>
-                    <h2 className="nominal main-asset" style={{marginBottom: 0}}>{grossIncome[interval].grossIncome}</h2>
+                    <h2 className="nominal main-asset" style={{ marginBottom: 0 }}>{grossIncome[interval].grossIncome}</h2>
                     <ChangePercentageButton backgroundColor="transparent" percentage={grossIncome[interval].lastYearPercentageGain} subdued={true}></ChangePercentageButton>
                     <LastInterval>vs last year</LastInterval>
                 </div>
@@ -46,7 +46,7 @@ export default function GrossIncomeCard({ grossIncome, marginTop = "18px", defau
                 <h4>Less expenses: <span className="nominal expense">{grossIncome[interval].lessExpenses}</span></h4>
                 <h4>Net income: <span className="nominal">{grossIncome[interval].netIncome}</span></h4>
             </CardFooterSC>
-            <IntervalButtonContainer selectedIndex={selectedInterval} setSelectedInterval={setSelectedInterval}></IntervalButtonContainer>
+            {showInterval ? (<IntervalButtonContainer selectedIndex={selectedInterval} setSelectedInterval={setSelectedInterval}></IntervalButtonContainer>) : null}
         </CardSC>
     )
 }

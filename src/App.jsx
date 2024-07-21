@@ -35,7 +35,7 @@ function App() {
     }
     return prop
   }, [selectedRegionIndex])
-
+  const fy = `FY ${new Date().getFullYear()}`
   return (
     <>
       <div className='sm:hidden block'>
@@ -51,7 +51,7 @@ function App() {
         <LineBreak $margin></LineBreak>
         <ConfigurationButtonContainer></ConfigurationButtonContainer>
       </div>
-      <div className="sm:block hidden">
+      <div className="sm:block hidden mt-5">
         <Flex>
           <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1" }}>
             <Flex $rowGap="1.5rem" $direction="column">
@@ -65,15 +65,15 @@ function App() {
               </Flex>
             </Flex>
           </CardSC>
-          <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1" }}>
+          <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1", height: "max-content" }}>
             <Flex $rowGap="1.5rem" $direction="column">
               <Flex $columnGap="1.5rem">
-                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome} defaultSelectedIndex={0}></GrossIncomeCard>
-                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome} defaultSelectedIndex={1}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' intervalText='Day' grossIncome={data.grossIncome} defaultSelectedIndex={0} showInterval={false}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' intervalText='Month' grossIncome={data.grossIncome} defaultSelectedIndex={1} showInterval={false}></GrossIncomeCard>
               </Flex>
               <Flex $columnGap="1.5rem">
-                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome} defaultSelectedIndex={2}></GrossIncomeCard>
-                <GrossIncomeCard marginTop='0' grossIncome={data.grossIncome} defaultSelectedIndex={3}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' intervalText='Quarter' grossIncome={data.grossIncome} defaultSelectedIndex={2} showInterval={false}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' intervalText={fy} grossIncome={data.grossIncome} defaultSelectedIndex={3} showInterval={false}></GrossIncomeCard>
               </Flex>
             </Flex>
           </CardSC>
