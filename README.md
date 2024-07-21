@@ -23,6 +23,8 @@ I used Vite to speed up my development time. I chose React for this task because
 
 ### Large Screen UI
 
+(https://www.figma.com/design/DiUvmRxTTqMZ41yWu0J8Qq/Untitled?node-id=0-1&t=cQLG4uNqpjBQQSMu-1)
+
 <p>
 Because this is a complex app (investment apps usually contain a lot of complex numbers, configurations, and calculations), I want to convert the mobile UI into a significantly different UI for desktop/laptop screens. I don't want to just "make the cards, buttons, and text bigger" because that is not helpful.
 </p>
@@ -47,4 +49,20 @@ I am trying to implement a Z-shaped layout (https://uxplanet.org/z-shaped-patter
 
 <p>
 Therefore, I placed the net assets and gross income at the top of the page, as these elements will surely catch the user's eye when scanning. I also displayed all regions and the entire timeframe, because on a web page, we can show all the information. This differs from mobile, where the screen is limited, and we use button tabs to change the state. On mobile, we can display the cards (for USA, Australia, Europe) vertically, but it would require the user to scroll longer, which we want to avoid. In fact, there's a term for this called scrolling fatigue (https://ux4sight.com/blog/understanding-the-basics-of-scrolling-fatigue).
+</p>
+
+<p>
+   Any other "optional buttons" (or buttons/information that people do not need to look at all the time) I put in the sidebar (yes, the sidebar is working in the desktop version). I put the search button and AI suggested queries in the sidebar because I see them as a "do the task in the end" (equivalent to finish scrolling in the mobile version) type of thing. After users scan/see their investments, most of the time they open the sidebar.
+</p>
+
+<p>
+    Side note, as you can see I don't display the region icon in every card, because I think it is very redundant to display the same icon again and again. So I only put the icon in the net assets.
+</p>
+
+<p>
+    For the main content, as you can see, I put all of the region information on the page. So, you might ask, "What happens if we support all regions? There are 170 countries, so will there be 170 cards?" My answer is that I always assume when I create the layout, I am developing the real application. First of all, supporting regions for investment is hard because of the strict regulations in each country (maybe because of tax reasons, security reasons, privacy reasons), so I imagine in the next year there will be only ~5 additional countries. My design is still capable of holding that much information with cards. Second, I don't want to prematurely "optimize" my UI for dozens additional country.
+</p>
+
+<p>
+But still, I would like to make a plan if someday there are ~30 countries. Obviously my design is going to reflect the additional countries. My solution would be pagination in each of the main card (net assets, gross income, and portfolio performance) and add a configuration for the users so the users can choose how many content cards that can be displayed.
 </p>
