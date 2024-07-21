@@ -56,12 +56,12 @@ function App() {
           <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1" }}>
             <Flex $rowGap="1.5rem" $direction="column">
               <Flex $columnGap="1.5rem">
-                <NetAssetsCard region="All" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-                <NetAssetsCard region="Australia" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+                <NetAssetsCard region="All" net={allRegion.netAssets} gross={allRegion.grossAssets} percent={allRegion.lastDayPercentageGain} liab={allRegion.liabilities}></NetAssetsCard>
+                <NetAssetsCard region="Australia" net={australiaRegion.netAssets} gross={australiaRegion.grossAssets} percent={australiaRegion.lastDayPercentageGain} liab={australiaRegion.liabilities}></NetAssetsCard>
               </Flex>
               <Flex $columnGap="1.5rem">
-                <NetAssetsCard region="USA" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
-                <NetAssetsCard region="Europe" net={data.netAssets} gross={data.grossAssets} percent={data.lastDayPercentageGain} liab={data.liabilities}></NetAssetsCard>
+                <NetAssetsCard region="USA" net={usaRegion.netAssets} gross={usaRegion.grossAssets} percent={usaRegion.lastDayPercentageGain} liab={usaRegion.liabilities}></NetAssetsCard>
+                <NetAssetsCard region="Europe" net={europeRegion.netAssets} gross={europeRegion.grossAssets} percent={europeRegion.lastDayPercentageGain} liab={europeRegion.liabilities}></NetAssetsCard>
               </Flex>
             </Flex>
           </CardSC>
