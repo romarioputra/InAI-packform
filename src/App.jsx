@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import RegionButtonContainer from './components/RegionButton'
+import RegionButtonContainer, { RegionTitle } from './components/RegionButton'
 import AskAIButton from './components/AskAIButton'
 import AIQueryButtonContainer from './components/AIQuery'
 import ConfigurationButtonContainer from './components/Config'
@@ -14,12 +14,12 @@ import LastIntervalButton from './components/LastInterval'
 import RowChangeContainer, { LineBreak, RowChanges } from './components/PortfolioPerformance'
 import { allRegion, australiaRegion, europeRegion, usaRegion } from './data/data'
 import NetAssetsCard from './components/card/NetAssets'
-import GrossIncomeCard from './components/card/GrossIncome'
+import GrossIncomeCard, { Heading } from './components/card/GrossIncome'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import { Flex } from './components/FlexCointainer'
 import { CardHeaderSC, CardSC } from './components/card/Card'
-import { Title } from './components/SectionHeading'
+import { SectionTitle, Title } from './components/SectionHeading'
 
 function App() {
   const [selectedRegionIndex, setSelectedRegionIndex] = useState(0)
@@ -68,20 +68,51 @@ function App() {
               </Flex>
             </Flex>
           </CardSC>
-          <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1", height: "max-content" }}>
+          <CardSC $maxContent $backgroundColor="white" $borderRadius="10px" style={{ flexGrow: "1" }}>
             <CardHeaderSC><h1 className="title mb-3">Gross income</h1></CardHeaderSC>
             <Flex $rowGap="1.5rem" $direction="column">
               <Flex $columnGap="1.5rem">
-                <GrossIncomeCard marginTop='0' region="All" grossIncome={allRegion.grossIncome} defaultSelectedIndex={0}></GrossIncomeCard>
-                <GrossIncomeCard marginTop='0' region="Australia" grossIncome={australiaRegion.grossIncome} defaultSelectedIndex={1}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' region="All" grossIncome={allRegion.grossIncome}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' region="Australia" grossIncome={australiaRegion.grossIncome}></GrossIncomeCard>
               </Flex>
               <Flex $columnGap="1.5rem">
-                <GrossIncomeCard marginTop='0' region="USA" grossIncome={usaRegion.grossIncome} defaultSelectedIndex={2}></GrossIncomeCard>
-                <GrossIncomeCard marginTop='0' region="Europe" grossIncome={europeRegion.grossIncome} defaultSelectedIndex={3}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' region="USA" grossIncome={usaRegion.grossIncome}></GrossIncomeCard>
+                <GrossIncomeCard marginTop='0' region="Europe" grossIncome={europeRegion.grossIncome}></GrossIncomeCard>
+              </Flex>
             </Flex>
+          </CardSC>
+        </Flex >
+        <Flex className='mt-5'>
+          <CardSC $maxContent $backgroundColor="white" $borderRadius="10px">
+            <CardHeaderSC><h1 className="title mb-3">Portfolio Performance</h1></CardHeaderSC>
+            <Flex $columnGap="1.5rem">
+              <CardSC>
+                <CardHeaderSC>
+                  <Heading className="title">All</Heading>
+                </CardHeaderSC>
+                <RowChanges portfolioPerformance={allRegion.portfolioPerformance}></RowChanges>
+              </CardSC>
+              <CardSC>
+                <CardHeaderSC>
+                  <Heading className="title">Australia</Heading>
+                </CardHeaderSC>
+                <RowChanges portfolioPerformance={australiaRegion.portfolioPerformance}></RowChanges>
+              </CardSC>
+              <CardSC>
+                <CardHeaderSC>
+                  <Heading className="title">USA</Heading>
+                </CardHeaderSC>
+                <RowChanges portfolioPerformance={usaRegion.portfolioPerformance}></RowChanges>
+              </CardSC>
+              <CardSC>
+                <CardHeaderSC>
+                  <Heading className="title">Europe</Heading>
+                </CardHeaderSC>
+                <RowChanges portfolioPerformance={europeRegion.portfolioPerformance}></RowChanges>
+              </CardSC>
+            </Flex>
+          </CardSC>
         </Flex>
-      </CardSC>
-    </Flex >
       </div >
     </>
   )

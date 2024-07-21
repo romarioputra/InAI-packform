@@ -23,6 +23,12 @@ const RegionButtonSC = styled(ButtonSC)`
 
 `
 
+export function RegionTitle({ region }) {
+    return (
+        <><img src={`/${region}.svg`}></img> <span className="text">{region}</span></>
+    )
+}
+
 function RegionButton({ region, selected, index, setSelectedRegionIndex }) {
     return (
         <>
@@ -30,7 +36,7 @@ function RegionButton({ region, selected, index, setSelectedRegionIndex }) {
                 $transition="borderColor"
                 $border="transparent" $textSize="md" $selected={selected}
                 onClick={() => setSelectedRegionIndex(index)}>
-                <img src={`/${region}.svg`}></img> <span className="text">{region}</span>
+                    <RegionTitle region={region}></RegionTitle>
             </RegionButtonSC>
         </>
     )

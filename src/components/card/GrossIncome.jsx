@@ -15,7 +15,7 @@ const LastInterval = styled.span`
     color: var(--pf-gray);
 `
 
-const Heading = styled.h3`
+export const Heading = styled.h3`
     color: var(--pf-gray);
 `
 

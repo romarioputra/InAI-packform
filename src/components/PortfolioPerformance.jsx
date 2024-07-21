@@ -34,20 +34,7 @@ function RowChange({ interval, changeNominal, changePercentage }) {
     )
 }
 
-export function RowChanges({portfolioPerformance, portfolioProperty}) {
-    const fyTxt = `FY ${new Date().getFullYear()}`
-    return (
-        <>
-            <RowChange interval="Month" changeNominal={portfolioPerformance[portfolioProperty].month.nominal} changePercentage={portfolioPerformance[portfolioProperty].month.percentage}></RowChange>
-            <LineBreak></LineBreak>
-            <RowChange interval="Quarter" changeNominal={portfolioPerformance[portfolioProperty].quarter.nominal} changePercentage={portfolioPerformance[portfolioProperty].quarter.percentage}></RowChange>
-            <LineBreak></LineBreak>
-            <RowChange interval={fyTxt} changeNominal={portfolioPerformance[portfolioProperty].fy.nominal} changePercentage={portfolioPerformance[portfolioProperty].fy.percentage}></RowChange>
-        </>
-    )
-}
-
-export default function RowChangeContainer({ portfolioPerformance }) {
+export function RowChanges({portfolioPerformance}) {
     const [selectedIndex, setSelectedIndex] = useState(2)
     const portfolioProperty = useMemo(() => {
         let prop = 'all'
@@ -59,11 +46,24 @@ export default function RowChangeContainer({ portfolioPerformance }) {
         }
         return prop
     }, [selectedIndex])
+    const fyTxt = `FY ${new Date().getFullYear()}`
+    return (
+        <>  
+            <PortfolioChangeButtonContainer selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}></PortfolioChangeButtonContainer>
+            <RowChange interval="Month" changeNominal={portfolioPerformance[portfolioProperty].month.nominal} changePercentage={portfolioPerformance[portfolioProperty].month.percentage}></RowChange>
+            <LineBreak></LineBreak>
+            <RowChange interval="Quarter" changeNominal={portfolioPerformance[portfolioProperty].quarter.nominal} changePercentage={portfolioPerformance[portfolioProperty].quarter.percentage}></RowChange>
+            <LineBreak></LineBreak>
+            <RowChange interval={fyTxt} changeNominal={portfolioPerformance[portfolioProperty].fy.nominal} changePercentage={portfolioPerformance[portfolioProperty].fy.percentage}></RowChange>
+        </>
+    )
+}
+
+export default function RowChangeContainer({ portfolioPerformance }) {
     return (
         <div>
             <SectionTitle>Portfolio Performance</SectionTitle>
-            <PortfolioChangeButtonContainer selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}></PortfolioChangeButtonContainer>
-            <RowChanges portfolioPerformance={portfolioPerformance} portfolioProperty={portfolioProperty}></RowChanges>
+            <RowChanges portfolioPerformance={portfolioPerformance}></RowChanges>
         </div>
     )
 }
