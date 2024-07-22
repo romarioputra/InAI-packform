@@ -12,7 +12,6 @@ const Container = styled(Flex)`
 
 const IntervalButtonSC = styled(ButtonSC)`
     flex-basis: 100%;
-    padding: 0;
 
     .text {
         font-weight: 700;
