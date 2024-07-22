@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { AskAIButtonSC } from "./AskAIButton";
 import { Flex } from "./FlexCointainer";
-import "./Navbar.css"
 import Header from "./Header";
 import AIQueryButtonContainer from "./AIQuery";
 import ConfigurationButtonContainer from "./Config";
 import AddInvestmentContainer from "./AddInvestment";
 import { SectionTitle } from "./SectionHeading";
+import { CloseSidebarToggle, Sidebar } from "./Sidebar";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,8 +32,8 @@ export default function Navbar() {
                     <Flex>
                         <AskAIButtonSC $backgroundColor="midnight"><img className="mb-1" src="/white-wand.svg"></img><span className="text">Ask AI</span></AskAIButtonSC>
                         <img src="/burger.svg" onClick={toggleSidebar} className="toggle-button"></img>
-                        <span onClick={toggleSidebar} className={`close-button ${isOpen ? 'open' : ''} my-5`}>X</span>
-                        <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+                        <CloseSidebarToggle onClick={toggleSidebar} $isOpen={isOpen} className="my-5">X</CloseSidebarToggle>
+                        <Sidebar $isOpen={isOpen}>
                             <Header></Header>
                             <div className="pl-5">
                                 <SectionTitle>New Investment</SectionTitle>
@@ -45,7 +45,7 @@ export default function Navbar() {
                             <div>
                                 <ConfigurationButtonContainer></ConfigurationButtonContainer>
                             </div>
-                        </div>
+                        </Sidebar>
                     </Flex>
                 </Flex>
             </div>
